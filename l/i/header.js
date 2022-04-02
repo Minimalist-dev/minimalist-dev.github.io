@@ -9,12 +9,10 @@ const H1    = window.matchMedia("(min-width: 801px)");
 const H2    = window.matchMedia("(min-width: 551px) and (max-width: 800px)");
 const H3    = window.matchMedia("(max-width: 550px)");
 
-console.log(URL);
-console.log(URL.substr(0,3));
-
 class Navegacion {
     constructor() {
         switch(URL) {
+            case "/":
             case "/index.html":
             case "/desarrollo-web.html":
             case "/mantenimiento-web.html":
@@ -86,7 +84,7 @@ class Navegacion {
     }
     static 
     mediaUno(H1) {
-        if(H1.matches && URL === "/index.html" || H1.matches && URL === "/en/index.html") {
+        if(H1.matches && URL === "/" || H1.matches && URL === "/index.html" || H1.matches && URL === "/en/index.html") {
             document.querySelector(".header_11").style.color = "var(--n-color-3)";
         } else if(H1.matches && URL === "/desarrollo-web.html" || H1.matches && URL === "/en/web-development.html") {
             document.querySelector(".header_21").style.color = "var(--n-color-3)";
@@ -98,7 +96,7 @@ class Navegacion {
     }
     static 
     mediaDos(H2) {
-        if(H2.matches && URL === "/index.html" || H2.matches && URL === "/en/index.html") {
+        if(H2.matches && URL === "/" || H2.matches && URL === "/index.html" || H2.matches && URL === "/en/index.html") {
             document.querySelector(".header_12").style.color = "var(--n-color-3)";
         } else if(H2.matches && URL === "/desarrollo-web.html" || H2.matches && URL === "/en/web-development.html") {
             document.querySelector(".header_22").style.color = "var(--n-color-3)";
@@ -110,7 +108,7 @@ class Navegacion {
     }
     static 
     mediaTres(H3) {
-        if(H3.matches && URL === "/index.html" || H3.matches && URL === "/en/index.html") {
+        if(H3.matches && URL === "/" || H3.matches && URL === "/index.html" || H3.matches && URL === "/en/index.html") {
             document.querySelector(".header_13").style.color = "var(--n-color-3)";
         } else if(H3.matches && URL === "/desarrollo-web.html" || H3.matches && URL === "/en/web-development.html") {
             document.querySelector(".header_23").style.color = "var(--n-color-3)";
