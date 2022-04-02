@@ -42,7 +42,7 @@ class Navegacion {
         let detonador = document.querySelector(".mediano");
         
         if(menuTablet.innerHTML === `<i class="fa fa-bars" aria-hidden="true"></i>`) { 
-            menuTablet.innerHTML = "<i class='fas fa-times-circle' style='color: var(--n-color-6);'></i>";
+            menuTablet.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
         } else { 
             menuTablet.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`;
         }
@@ -54,7 +54,7 @@ class Navegacion {
         let detonador = document.querySelector(".minimo");
         
         if(menuCelular.innerHTML === `<i class="fa fa-bars" aria-hidden="true"></i>`) { 
-            menuCelular.innerHTML = "<i class='fas fa-times-circle' style='color: var(--n-color-6);'></i>";
+            menuCelular.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
         } else { 
             menuCelular.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`;
         }
