@@ -66,7 +66,7 @@ class Navegacion {
         let idioma = document.querySelector("#idioma");
         
         if(idiomas.innerHTML === "Seleccionar idioma" || idiomas.innerHTML === "Select language") {
-            idioma.innerHTML = `<a href="/github/minimalist-dev.github.io/index.html">Español</a><a href="/github/minimalist-dev.github.io/en/index.html">English</a>`;
+            idioma.innerHTML = `<a href="/github/minimalist-dev.github.io/index.html">Español</a><a href="en/index.html">English</a>`;
             idiomas.innerHTML = "<i class='fas fa-times-circle' style='color: var(--n-color-6);'></i>";
         } else {
             idioma.innerHTML = "";
