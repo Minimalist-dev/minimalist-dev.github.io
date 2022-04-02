@@ -1,0 +1,246 @@
+/* 
+    Created on : 2 abr. 2022, 12:29:00 a. m.
+    Author     : neury-dev
+*/
+
+/* header
+--------------------------------------------------------------------------------*/
+.n-grid > .area_1 > header {
+    display: flex;
+    
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    border-bottom: 1px solid var(--n-color-2-3);
+    padding: 16px 0px 16px 0px;
+    background-color: var(--n-color-1);
+}
+.n-grid > .area_1 > header > h1 {
+    color: var(--n-color-1);
+    background-color: var(--n-color-4);
+    font-family: var(--n-fuente-2);
+    font-size: 2.10em;
+    margin: 4px 0px 0px 32px;
+    border-radius: 4px;
+    padding: 6px 10px 0px 8px;
+    text-shadow: var(--n-sombra-de-texto-1);
+}
+.n-grid > .area_1 > header > h1 > span { 
+    color: var(--n-color-1); 
+    text-shadow: var(--n-sombra-de-texto-1);
+    text-decoration: overline underline;
+}
+.n-grid > .area_1 > header > section {
+    display: flex;
+    flex-direction: row;
+    
+    position: absolute;
+    right: 0;
+    font-size: 0.90em;
+    width: auto;
+    margin: 0px 32px 0px 0px;
+    /*border: 1px solid var(--n-color-2);*/
+}
+.n-grid > .area_1 > header > section > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+.n-grid > .area_1 > header > section a {
+    color: var(--n-color-4);
+    margin-left: 8px;
+}
+.n-grid > .area_1 > header > section > div > button:hover,
+.n-grid > .area_1 > header > section a:hover {
+    color: var(--n-color-4);
+    text-decoration: underline;
+}
+.n-grid > .area_1 > header > section > div > button {
+    color: var(--n-color-4);
+    background: var(--n-color-1);
+    font-size: 1.0em;
+    margin: 0;
+    margin-top: -2px;
+    margin-left: 8px;
+    padding: 0px;
+}
+.n-grid > .area_1 > header > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+    position: absolute;
+    right: 0;
+    width: auto;
+    margin: 32px 32px 0px 0px;
+    /*border: 1px solid var(--n-color-2);*/
+    padding: 0px;
+}
+.n-grid > .area_1 > header > nav > section > *,
+.n-grid > .area_1 > header > nav > section > section > * { margin: 0; }
+.n-grid > .area_1 > header > nav > :nth-child(2) {
+    display: flex;
+    align-items: flex-end;
+}
+.n-grid > .area_1 > header > nav ul {
+    list-style: none;
+    padding: 0;
+}
+.n-grid > .area_1 > header > nav > section > ul > li, 
+.n-grid > .area_1 > header > nav > section > section > ul > li,
+.n-grid > .area_1 > header > nav > section > .mediano-oculto > .mediano > ul > li {
+    display: inline;
+    font-weight: bold;
+}
+.n-grid > .area_1 > header > nav > section > .minimo-oculto > .minimo > ul > li {
+    font-weight: bold;
+    margin: 0.50em 0em;
+}
+.n-grid > .area_1 > header > nav ul > li {
+    position: relative;
+    padding-left: 16px;
+}
+.n-grid > .area_1 > header > nav ul > li > a {
+    position: relative;
+    color: var(--n-color-4);
+}
+.mediano-oculto {
+    display: flex;
+    flex-direction: row;
+}
+.n-grid > .area_1 > header > nav button {
+    position: relative;
+    color: var(--n-color-4);
+    background-color: var(--n-color-1);
+    font-size: 1.0em;
+    margin: -2px 0 0 16px;
+    padding: 0;
+}
+.n-grid > .area_1 > header > nav button.menu_tablet {
+    margin-left: 16px;
+}
+.n-grid > .area_1 > header > nav > section > ul > li > .cubrir,
+.n-grid > .area_1 > header > nav > section > section > ul > li > .cubrir,
+.n-grid > .area_1 > header > nav > section > .mediano-oculto > .mediano > ul > li > .cubrir {
+    padding-left: 7px;
+}
+.n-grid > .area_1 > header > nav > section > ul > li > .cubrir,
+.n-grid > .area_1 > header > nav > section > section > ul > li > .cubrir { 
+    display: none;
+    position: absolute;
+    left: 0.70em;
+    bottom: 1.10em;
+    height: 0;
+}
+.n-grid > .area_1 > header > nav > section > .mediano-oculto > .mediano > ul > li > .cubrir {
+    display: none;
+    position: absolute;
+    left: 0.70em;
+    bottom: 1.14em;
+    height: 0;
+}
+.n-grid > .area_1 > header > nav > section > .minimo-oculto > .minimo > ul > li > .cubrir {
+    display: none;
+    position: absolute;
+    bottom: 1.20em;
+    height: 0;
+}
+.n-grid > .area_1 > header > nav ul > li > .cubrir > .con {
+    color: var(--n-color-3);
+}
+.n-grid > .area_1 > header > nav > section > ul > li:hover .cubrir,
+.n-grid > .area_1 > header > nav > section > section > ul > li:hover .cubrir,
+.n-grid > .area_1 > header > nav > section > .mediano-oculto > .mediano > ul > li:hover .cubrir,
+.n-grid > .area_1 > header > nav > section > .minimo-oculto > ul > li:hover .cubrir,
+.n-grid > .area_1 > header > nav > section > .minimo-oculto > .minimo > ul > li:hover .cubrir { 
+    display: block;
+    animation: cubrir 1.5s ease-in-out 2 alternate forwards;
+}
+@keyframes cubrir {
+    0%   { clip: rect(0px, 0px, 200px, 0px);   }
+    25%  { clip: rect(0px, 35px, 200px, 0px);  }
+    50%  { clip: rect(0px, 60px, 200px, 0px);  }
+    75%  { clip: rect(0px, 85px, 200px, 0px);  }
+    100% { clip: rect(0px, 110px, 200px, 0px); }
+}
+.n-grid > .area_1 > header > nav ul > li:hover .enlace {
+    animation: enlace 1.5s forwards; 
+}
+@keyframes enlace {
+    0%   { opacity: 0.75;           }
+    25%  { opacity: 0.50;           }
+    50%  { opacity: 0.25;           }
+    75%  { opacity: 0.00;           }
+    100% { color: var(--n-color-3); }
+}
+
+/* Maquetado
+--------------------------------------------------------------------------------*/
+@media screen and (min-width: 551px) and (max-width: 800px) {
+    .n-grid > .area_1 > header {
+        padding: 12px 0px 10px 0px;
+    }
+    .n-grid > .area_1 > header > h1 {
+        margin: 0px 0px 0px 24px;
+    }
+    .n-grid > .area_1 > header > section {
+        margin: 0px 24px 0px 0px;
+    }
+    .n-grid > .area_1 > header > nav {
+        margin: 24px 24px 0px 0px;
+    }
+    .n-grid > .area_1 > header > nav > section > .mediano-oculto > .mediano {
+        display: none;
+        position: fixed;
+        top: 61px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        border-bottom: 1px solid var(--n-color-2-3);
+        padding-left: 8px;
+        background-color: var(--n-color-1);
+    }
+}
+@media screen and (max-width: 550px) {
+    .n-grid > .area_1 > header {
+        padding: 12px 0px 12px 0px;
+    }
+    .n-grid > .area_1 > header > h1 {
+        margin: 4px 0px 0px 12px;
+    }
+    .n-grid > .area_1 > header > section {
+        flex-direction: column-reverse;
+        
+        left: 102px;
+        margin: 12px 0px 0px 0px;
+    }
+    .n-grid > .area_1 > header > section > div {
+        margin-top: 6px;
+    }
+    .n-grid > .area_1 > header > nav {
+        margin: 30px 12px 0px 0px;
+    }
+    .n-grid > .area_1 > header > nav button {
+        position: absolute;
+        top: -6px;
+        right: 0px;
+        
+        font-size: 1.50em;
+    }
+    .minimo { 
+        display: none;
+        position: fixed;
+        top: 67px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        border-bottom: 1px solid var(--n-color-2-3);
+        background-color: var(--n-color-1);
+    }
+}
+@media screen and (min-width: 550px) { .minimo-oculto { display: none; } }
+@media screen and (max-width: 550px), (min-width: 800px) { .mediano-oculto { display: none; } }
+@media screen and (max-width: 800px) { .maximo-oculto { display: none; } }
+
+/*.display { display: block; }*/
+

@@ -1,0 +1,171 @@
+/* 
+    Created on : 2 abr. 2022, 12:28:42 a. m.
+    Author     : neury-dev
+*/
+*, *:before, 
+*:after { 
+    box-sizing: border-box; 
+}
+html {
+    scroll-behavior: smooth;
+}
+body { 
+    color: #4d4d4d !important;
+    font-size: 100% !important;
+    font: 0.80em "Verdana", Helvetica, Tahoma, sans-serif !important;
+    line-height: 1em;
+    margin: 0 !important;
+}
+a { text-decoration: none; outline: none; }
+a, 
+button, 
+select { 
+    cursor: pointer;
+}
+label { font-weight: bold; }
+button,
+input,
+textArea, 
+select { 
+    border: none;
+    outline: none; 
+}
+input:disabled { cursor: not-allowed; }
+.titulo {  
+    letter-spacing: -0.07em; 
+    transform: scaleY(1.6);
+}
+.display { display: block; }
+:root {
+    /*--n-fuente-1:                 "Georgia", Garamond, serif;*/
+    --n-fuente-2:             "Verdana", Helvetica, Tahoma, sans-serif;
+    /*--n-fuente-3:            "Lucida Console", Courier, monospace;*/
+    
+    --n-color-0:            transparent;
+    --n-color-1:            #ffffff;
+    --n-color-1-1:          rgba(255, 255, 255, 0.1);
+    --n-color-1-2:          rgba(255, 255, 255, 0.2);
+    --n-color-1-3:          rgba(255, 255, 255, 0.3);
+    --n-color-1-4:          rgba(255, 255, 255, 0.4);
+    --n-color-1-5:          rgba(255, 255, 255, 0.5);
+    --n-color-1-6:          rgba(255, 255, 255, 0.6);
+    --n-color-1-7:          rgba(255, 255, 255, 0.7);
+    --n-color-1-8:          rgba(255, 255, 255, 0.8);
+    --n-color-1-9:          rgba(255, 255, 255, 0.9);
+    --n-color-2:            #8a8a8a;
+    --n-color-2-1:          rgba(138, 138, 138, 0.1);
+    --n-color-2-2:          rgba(138, 138, 138, 0.2);
+    --n-color-2-3:          rgba(138, 138, 138, 0.3);
+    --n-color-2-4:          rgba(138, 138, 138, 0.4);
+    --n-color-2-5:          rgba(138, 138, 138, 0.5);
+    --n-color-2-6:          rgba(138, 138, 138, 0.6);
+    --n-color-2-7:          rgba(138, 138, 138, 0.7);
+    --n-color-2-8:          rgba(138, 138, 138, 0.8);
+    --n-color-2-9:          rgba(138, 138, 138, 0.9);
+    --n-color-3:            #8f6e3d;
+    --n-color-3-1:          rgba(143, 110, 61, 0.1);
+    --n-color-3-2:          rgba(143, 110, 61, 0.2);
+    --n-color-3-3:          rgba(143, 110, 61, 0.3);
+    --n-color-3-4:          rgba(143, 110, 61, 0.4);
+    --n-color-3-5:          rgba(143, 110, 61, 0.5);
+    --n-color-3-6:          rgba(143, 110, 61, 0.6);
+    --n-color-3-7:          rgba(143, 110, 61, 0.7);
+    --n-color-3-8:          rgba(143, 110, 61, 0.8);
+    --n-color-3-9:          rgba(143, 110, 61, 0.9);
+    --n-color-4:            #4d4d4d;
+    --n-color-4-1:          rgba(77, 77, 77, 0.1);
+    --n-color-4-2:          rgba(77, 77, 77, 0.2);
+    --n-color-4-3:          rgba(77, 77, 77, 0.3);
+    --n-color-4-4:          rgba(77, 77, 77, 0.4);
+    --n-color-4-5:          rgba(77, 77, 77, 0.5);
+    --n-color-4-6:          rgba(77, 77, 77, 0.6);
+    --n-color-4-7:          rgba(77, 77, 77, 0.7);
+    --n-color-4-8:          rgba(77, 77, 77, 0.8);
+    --n-color-4-9:          rgba(77, 77, 77, 0.9);
+    --n-color-5:            #576600;
+    --n-color-5-1:          rgba(87, 102, 0, 0.1);
+    --n-color-5-2:          rgba(87, 102, 0, 0.2);
+    --n-color-5-3:          rgba(87, 102, 0, 0.3);
+    --n-color-5-4:          rgba(87, 102, 0, 0.4);
+    --n-color-5-5:          rgba(87, 102, 0, 0.5);
+    --n-color-5-6:          rgba(87, 102, 0, 0.6);
+    --n-color-5-7:          rgba(87, 102, 0, 0.7);
+    --n-color-5-8:          rgba(87, 102, 0, 0.8);
+    --n-color-5-9:          rgba(87, 102, 0, 0.9);
+    --n-color-6:            #94201e;
+    --n-color-6-1:          rgba(148, 32, 30, 0.1);
+    --n-color-6-2:          rgba(148, 32, 30, 0.2);
+    --n-color-6-3:          rgba(148, 32, 30, 0.3);
+    --n-color-6-4:          rgba(148, 32, 30, 0.4);
+    --n-color-6-5:          rgba(148, 32, 30, 0.5);
+    --n-color-6-6:          rgba(148, 32, 30, 0.6);
+    --n-color-6-7:          rgba(148, 32, 30, 0.7);
+    --n-color-6-8:          rgba(148, 32, 30, 0.8);
+    --n-color-6-9:          rgba(148, 32, 30, 0.9);
+    
+    --n-transicion:             all 0.8s ease-in-out;
+    
+    /*--n-radio:                  8px;*/
+    /*--n-relleno:                8px;*/
+    
+    --n-sombra-de-texto-1:  -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    --n-sombra-de-texto-2:  -1px 0 #8a8a8a, 0 1px #8a8a8a, 1px 0 #8a8a8a, 0 -1px #8a8a8a;
+    --n-sombra-de-texto-3:  -1px 0 #b9935a, 0 1px #b9935a, 1px 0 #b9935a, 0 -1px #b9935a;
+    /*--n-sombra-de-texto-verde:  -1px 0 #457725, 0 1px #457725, 1px 0 #457725, 0 -1px #457725;*/
+    --n-sombra-de-texto-6:  -1px 0 #dc5856, 0 1px #dc5856, 1px 0 #dc5856, 0 -1px #dc5856;
+    
+    --n-sombra-1:   0 0 20px white, 0 0 30px white;
+    --n-sombra-1-1: 0 0 10px white, 0 0 40px white, 0 0 80px white;
+    --n-sombra-2:   0 0 20px #1c1d22, 0 0 30px #1c1d22;
+    --n-sombra-2-1: 0 0 10px #1c1d22, 0 0 40px #1c1d22, 0 0 80px #1c1d22;
+    --n-sombra-3:   0 0 20px #b9935a, 0 0 30px #b9935a;
+    --n-sombra-3-1: 0 0 10px #b9935a, 0 0 40px #b9935a, 0 0 80px #b9935a;
+    /*--n-sombra-verde:           0 0 20px #457725, 0 0 30px #457725;*/
+    /*--n-sombra-caja-verde:      0 0 10px #457725, 0 0 40px #457725, 0 0 80px #457725;*/
+    /*--n-sombra-rojo:            0 0 20px #901E1D, 0 0 30px #901E1D;*/
+    /*--n-sombra-caja-rojo:       0 0 10px #901E1D, 0 0 40px #901E1D, 0 0 80px #901E1D;*/
+}
+
+/* Estilo global
+--------------------------------------------------------------------------------*/
+.color_uno { color: var(--n-color-3) !important; }
+a:focus {
+    border-bottom: 2px dotted var(--n-color-4);
+}
+.foco_a:focus {
+    border-bottom: 2px dotted var(--n-color-1);
+}
+#copiar:focus,
+button:focus {
+    border: 2px dotted var(--n-color-4);
+}
+input:focus,
+textarea:focus {
+    border-right: 2px dotted var(--n-color-4);
+}
+/* Resolución no acta
+--------------------------------------------------------------------------------*/
+.no-acta { display: none; }
+
+@media screen and (max-width: 319px) { 
+    .n-grid { display: none !important; } 
+    .no-acta {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+        color: var(--n-color-4);
+        font-size: 6vw;
+        text-align: center;
+    }
+    .no-acta > i {
+        color: var(--n-color-6);
+        font-size: 12vw;
+    }
+    .no-acta > h3 {
+        color: var(--n-color-6);
+    }
+}
+
