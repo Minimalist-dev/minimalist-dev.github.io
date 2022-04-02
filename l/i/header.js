@@ -8,18 +8,18 @@ const URL   = window.location.pathname;
 const H1    = window.matchMedia("(min-width: 801px)");
 const H2    = window.matchMedia("(min-width: 551px) and (max-width: 800px)");
 const H3    = window.matchMedia("(max-width: 550px)");
-
+console.log(URL);
 class Navegacion {
     constructor() {
         switch(URL) {
-            case "/":
-            case "/desarrollo-web":
-            case "/mantenimiento-web":
-            case "/asesoria-web":
-            case "/en/":
-            case "/en/web-development":
-            case "/en/web-maintenance":
-            case "/en/web-consultancy":
+            case "/github/minimalist-dev.github.io/index.html":
+            case "/github/minimalist-dev.github.io/desarrollo-web":
+            case "/github/minimalist-dev.github.io/mantenimiento-web":
+            case "/github/minimalist-dev.github.io/asesoria-web":
+            case "/github/minimalist-dev.github.io/en/index.html":
+            case "/github/minimalist-dev.github.io/en/web-development":
+            case "/github/minimalist-dev.github.io/en/web-maintenance":
+            case "/github/minimalist-dev.github.io/en/web-consultancy":
                 Navegacion.mediaUno(H1);
                 H1.addListener(Navegacion.mediaUno);
                 Navegacion.mediaDos(H2);
@@ -27,8 +27,8 @@ class Navegacion {
                 Navegacion.mediaTres(H3);
                 H3.addListener(Navegacion.mediaTres);
                 break;
-            case "/contacto":
-            case "/en/contact":
+            case "/github/minimalist-dev.github.io/contacto":
+            case "/github/minimalist-dev.github.io/en/contact":
                 document.querySelector(".header_7").style.color = "var(--n-color-3)";
                 break;
         }
@@ -66,12 +66,12 @@ class Navegacion {
         let idioma = document.querySelector("#idioma");
         
         if(idiomas.innerHTML === "Seleccionar idioma" || idiomas.innerHTML === "Select language") {
-            idioma.innerHTML = `<a href="/">Español</a><a href="/en/">English</a>`;
+            idioma.innerHTML = `<a href="/github/minimalist-dev.github.io/index.html">Español</a><a href="/github/minimalist-dev.github.io/en/index.html">English</a>`;
             idiomas.innerHTML = "<i class='fas fa-times-circle' style='color: var(--n-color-6);'></i>";
         } else {
             idioma.innerHTML = "";
             
-            if(URL.substr(0,4) === "/en/") {
+            if(URL.substr(0,4) === "/github/minimalist-dev.github.io/en/index.html") {
                 idiomas.innerHTML = "Select language";
             } else {
                 idiomas.innerHTML = "Seleccionar idioma";
@@ -80,37 +80,37 @@ class Navegacion {
     }
     static 
     mediaUno(H1) {
-        if(H1.matches && URL === "/" || H1.matches && URL === "/en/") {
+        if(H1.matches && URL === "/github/minimalist-dev.github.io/index.html" || H1.matches && URL === "/github/minimalist-dev.github.io/en/index.html") {
             document.querySelector(".header_11").style.color = "var(--n-color-3)";
-        } else if(H1.matches && URL === "/desarrollo-web" || H1.matches && URL === "/en/web-development") {
+        } else if(H1.matches && URL === "/github/minimalist-dev.github.io/desarrollo-web" || H1.matches && URL === "/github/minimalist-dev.github.io/en/web-development") {
             document.querySelector(".header_21").style.color = "var(--n-color-3)";
-        } else if(H1.matches && URL === "/mantenimiento-web" || H1.matches && URL === "/en/web-maintenance") {
+        } else if(H1.matches && URL === "/github/minimalist-dev.github.io/mantenimiento-web" || H1.matches && URL === "/github/minimalist-dev.github.io/en/web-maintenance") {
             document.querySelector(".header_31").style.color = "var(--n-color-3)";
-        } else if(H1.matches && URL === "/asesoria-web" || H1.matches && URL === "/en/web-consultancy") {
+        } else if(H1.matches && URL === "/github/minimalist-dev.github.io/asesoria-web" || H1.matches && URL === "/github/minimalist-dev.github.io/en/web-consultancy") {
             document.querySelector(".header_41").style.color = "var(--n-color-3)";
         } 
     }
     static 
     mediaDos(H2) {
-        if(H2.matches && URL === "/" || H2.matches && URL === "/en/") {
+        if(H2.matches && URL === "/github/minimalist-dev.github.io/index.html" || H2.matches && URL === "/github/minimalist-dev.github.io/en/index.html") {
             document.querySelector(".header_12").style.color = "var(--n-color-3)";
-        } else if(H2.matches && URL === "/desarrollo-web" || H2.matches && URL === "/en/web-development") {
+        } else if(H2.matches && URL === "/github/minimalist-dev.github.io/desarrollo-web" || H2.matches && URL === "/github/minimalist-dev.github.io/en/web-development") {
             document.querySelector(".header_22").style.color = "var(--n-color-3)";
-        } else if(H2.matches && URL === "/mantenimiento-web" || H2.matches && URL === "/en/web-maintenance") {
+        } else if(H2.matches && URL === "/github/minimalist-dev.github.io/mantenimiento-web" || H2.matches && URL === "/github/minimalist-dev.github.io/en/web-maintenance") {
             document.querySelector(".header_32").style.color = "var(--n-color-3)";
-        } else if(H2.matches && URL === "/asesoria-web" || H2.matches && URL === "/en/web-consultancy") {
+        } else if(H2.matches && URL === "/github/minimalist-dev.github.io/asesoria-web" || H2.matches && URL === "/github/minimalist-dev.github.io/en/web-consultancy") {
             document.querySelector(".header_42").style.color = "var(--n-color-3)";
         }
     }
     static 
     mediaTres(H3) {
-        if(H3.matches && URL === "/" || H3.matches && URL === "/en/") {
+        if(H3.matches && URL === "/github/minimalist-dev.github.io/index.html" || H3.matches && URL === "/github/minimalist-dev.github.io/en/index.html") {
             document.querySelector(".header_13").style.color = "var(--n-color-3)";
-        } else if(H3.matches && URL === "/desarrollo-web" || H3.matches && URL === "/en/web-development") {
+        } else if(H3.matches && URL === "/github/minimalist-dev.github.io/desarrollo-web" || H3.matches && URL === "/github/minimalist-dev.github.io/en/web-development") {
             document.querySelector(".header_23").style.color = "var(--n-color-3)";
-        } else if(H3.matches && URL === "/mantenimiento-web" || H3.matches && URL === "/en/web-maintenance") {
+        } else if(H3.matches && URL === "/github/minimalist-dev.github.io/mantenimiento-web" || H3.matches && URL === "/github/minimalist-dev.github.io/en/web-maintenance") {
             document.querySelector(".header_33").style.color = "var(--n-color-3)";
-        } else if(H3.matches && URL === "/asesoria-web" || H3.matches && URL === "/en/web-consultancy") {
+        } else if(H3.matches && URL === "/github/minimalist-dev.github.io/asesoria-web" || H3.matches && URL === "/github/minimalist-dev.github.io/en/web-consultancy") {
             document.querySelector(".header_43").style.color = "var(--n-color-3)";
         }
     }
