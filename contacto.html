@@ -1,47 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+<html>
 <head>
     <!--------------------------------------------------------------------------
     SEO
     --------------------------------------------------------------------------->
-    <title>Oking | Servicios web</title>
+    <title>Contacto | Oking</title>
     <meta charset="UTF-8">
     <link rel="icon" href="i_img/ok100.png" type="image/png" sizes="16x16">
-    <meta name="author" content="Neury Eleasar Aguasvivas Lorenzo">
-    <meta name="description" 
-        content="
-            Especialistas en la creación de paginas y sitios web. Entre y descubra mas servicios web como mantenimiento, 
-            consultoría, entre otros.
-        "
-    >
-    <meta name="keywords" 
-        content="  
-            Página web,
-            Sitios web,
-            Servicios web, 
-            Desarrollo web, 
-            Mantenimiento web, 
-            Asesoría web, 
-            Administración web,
-            Guía web,
-        "
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--------------------------------------------------------------------------
     CSS 
     --------------------------------------------------------------------------->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='i_css/root.css' />
     <link rel='stylesheet' href='i_css/logo/ok.css' />
     <link rel='stylesheet' href='i_css/header.css' />
-    <link rel='stylesheet' href='i_css/index.css' />
+    <link rel='stylesheet' href='i_css/contacto.css' />
     <link rel='stylesheet' href='i_css/footer.css' />
     <!--------------------------------------------------------------------------
-    librerias 
+    JavaScript
     --------------------------------------------------------------------------->
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <style>
-        
-    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <section class="n-grid">
@@ -148,13 +127,125 @@ main
 ------------------------------------------------------------------------------->
 <section class="area_2">
     <main>
-        <div>
-            <h2 class="diapositiva activo">desarrollo</h2>
-            <h2 class="diapositiva">mantenimiento</h2>
-            <h2 class="diapositiva">asesoría</h2>
-            <p>todo lo que necesitas para construir <br>tu pagina o sitio <span>web</span></p>
-        </div>
-    </main>       
+        <section>
+            <h2 id="res">Contacto</h2>
+            <section>
+                <label for="email">Correo</label><br>
+                <input type="text" id="email" value="neury.developer@gmail.com" disabled=""><div class="info">
+                    <button id="copiar">
+                        <span id="dato" class="dato">Copiar correo</span>
+                        Copiar
+                    </button>
+                </div>
+            </section>
+        </section>
+        <section>
+            <form name="contacto" id="contacto">
+                <label class="label" for="nombre">Nombre: &nbsp;
+                    <input type="text" name="nombre" id="nombre" required="" class="input"
+                        maxlength="50"
+                        pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,}$"
+                        title="Solo se aceptan letras y espacios en blanco."
+                    >
+                    <svg viewBox="0 0 20 20" class="icono">
+                        <title>Icono de nombre</title>
+                        <path d="M0 0 L10 10 L0 20"></path>
+                    </svg>
+                    <svg viewBox="0 0 40 2" preserveAspectRatio="none" class="linea">
+                        <title>Linea</title>
+                        <path d="M0 1 L40 1"/>
+                        <path d="M0 1 L40 1" class="focus"/>
+                        <path d="M0 1 L40 1" class="invalid"/>
+                        <path d="M0 1 L40 1" class="valid"/>
+                    </svg>
+                </label>
+                <label class="label">Correo: &nbsp;
+                    <input type="email" name="correo" id="correo" required="" class="input" 
+                        maxlength="80"
+                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Ingrese una dirección de correo valida."
+                    >
+                    <svg viewBox="0 0 20 20" class="icono">
+                        <title>Icono de correo</title>
+                        <path d="M0 0 L10 10 L0 20"></path>
+                    </svg>
+                    <svg viewBox="0 0 40 2" preserveAspectRatio="none" class="linea">
+                        <title>Linea</title>
+                        <path d="M0 1 L40 1"/>
+                        <path d="M0 1 L40 1" class="focus"/>
+                        <path d="M0 1 L40 1" class="invalid"/>
+                        <path d="M0 1 L40 1" class="valid"/>
+                    </svg>
+                </label>
+                <section style="width: 300px;margin: 16px 0px 0px 0px;">
+                    <label for="proyecto" class="envase">Proyecto 
+                        <input type="radio" name="tema" id="proyecto" value="Proyecto"
+                            maxlength="12"
+                            pattern="^[A-Za-z]{3,}$"
+                        >
+                        <span class="tema"></span>
+                    </label>
+                    <label for="informacion" class="envase">Información
+                        <input type="radio" name="tema" id="informacion" value="Informacion"
+                            maxlength="12"
+                            pattern="^[A-Za-z]{3,}$"
+                        >
+                        <span class="tema"></span>
+                    </label>
+                    <label for="sugerencias" class="envase">Sugerencias
+                        <input type="radio" name="tema" id="sugerencias" value="Sugerencias"
+                            maxlength="12"
+                            pattern="^[A-Za-z]{3,}$"
+                        >
+                        <span class="tema"></span>
+                    </label>
+                    <label for="otros" class="envase">Otros
+                        <input type="radio" name="tema" id="otros" value="Otros"
+                            maxlength="12"
+                            pattern="^[A-Za-z]{3,}$"
+                        >
+                        <span class="tema"></span>
+                    </label>
+                </section>
+                <label class="label"> Asunto: &nbsp;
+                    <input type="text" name="asunto" id="asunto" required="" class="input"
+                        maxlength="50"
+                        pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,}$"
+                        title="Solo se aceptan letras y espacios en blanco."
+                    >
+                    <svg viewBox="0 0 20 20" class="icono">
+                        <title>Icono de asunto</title>
+                        <path d="M0 0 L10 10 L0 20"></path>
+                    </svg>
+                    <svg viewBox="0 0 40 2" preserveAspectRatio="none" class="linea">
+                        <title>Linea</title>
+                        <path d="M0 1 L40 1"/>
+                        <path d="M0 1 L40 1" class="focus"/>
+                        <path d="M0 1 L40 1" class="invalid"/>
+                        <path d="M0 1 L40 1" class="valid"/>
+                    </svg>
+                </label>
+                <label class="label" style="margin: 2px 0px 0px 0px;">Mensaje: &nbsp;
+                    <textarea name="mensaje" id="mensaje" placeholder="" required="" 
+                        maxlength="500"
+                        title="Solo se aceptan letras, espacios en blanco y los estos caracteres (,.¿?¡!@#). Cualquier otra cosa lo puede expresar con palabras."
+                    ></textarea>
+                    <svg viewBox="0 0 20 20" class="icono">
+                        <title>Icono de mensaja</title>
+                        <path d="M0 0 L10 10 L0 20"></path>
+                    </svg>
+                    <svg viewBox="0 0 40 2" preserveAspectRatio="none" class="linea">
+                        <title>Linea</title>
+                        <path d="M0 1 L40 1"/>
+                        <path d="M0 1 L40 1" class="focus"/>
+                        <path d="M0 1 L40 1" class="invalid"/>
+                        <path d="M0 1 L40 1" class="valid"/>
+                    </svg>
+                </label>
+                <button type="submit" id="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
 </section>
 <!------------------------------------------------------------------------------
 footer
@@ -183,6 +274,7 @@ Resolución no acta
 </section>
 
 <script src="l/i/header.js"></script>
-<script src="l/i/index.js"></script>
+<script src="l/i/contacto.js"></script>
+<script src="l/l/contacto.js"></script>
 </body>
 </html>

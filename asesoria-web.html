@@ -1,31 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+<html>
 <head>
     <!--------------------------------------------------------------------------
     SEO
     --------------------------------------------------------------------------->
-    <title>Oking | Servicios web</title>
+    <title>Asesoría web | Oking</title>
     <meta charset="UTF-8">
     <link rel="icon" href="i_img/ok100.png" type="image/png" sizes="16x16">
-    <meta name="author" content="Neury Eleasar Aguasvivas Lorenzo">
-    <meta name="description" 
-        content="
-            Especialistas en la creación de paginas y sitios web. Entre y descubra mas servicios web como mantenimiento, 
-            consultoría, entre otros.
-        "
-    >
-    <meta name="keywords" 
-        content="  
-            Página web,
-            Sitios web,
-            Servicios web, 
-            Desarrollo web, 
-            Mantenimiento web, 
-            Asesoría web, 
-            Administración web,
-            Guía web,
-        "
-    >
     <!--------------------------------------------------------------------------
     CSS 
     --------------------------------------------------------------------------->
@@ -33,15 +15,12 @@
     <link rel='stylesheet' href='i_css/root.css' />
     <link rel='stylesheet' href='i_css/logo/ok.css' />
     <link rel='stylesheet' href='i_css/header.css' />
-    <link rel='stylesheet' href='i_css/index.css' />
+    <link rel='stylesheet' href='i_css/index_comun.css' />
     <link rel='stylesheet' href='i_css/footer.css' />
     <!--------------------------------------------------------------------------
-    librerias 
+    JavaScript
     --------------------------------------------------------------------------->
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <style>
-        
-    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <section class="n-grid">
@@ -148,13 +127,65 @@ main
 ------------------------------------------------------------------------------->
 <section class="area_2">
     <main>
-        <div>
-            <h2 class="diapositiva activo">desarrollo</h2>
-            <h2 class="diapositiva">mantenimiento</h2>
-            <h2 class="diapositiva">asesoría</h2>
-            <p>todo lo que necesitas para construir <br>tu pagina o sitio <span>web</span></p>
+        <h2>Asesoría web</h2>
+        <p>
+            Obtén la orientación estratégica con la que <span class="desarrollo">mejorar</span> y <span class="desarrollo">crecer</span>. Descubre donde eres débil 
+            y fortalécete, descubre donde esta tu fortaleza y mejora. Y no olvides que la finalidad de la estrategia es 
+            conseguir el logro del <span class="desarrollo">objetivo</span> y la <span class="desarrollo">web</span> nunca a parado de evolucionar. 
+        </p>
+    </main>
+</section>
+<!------------------------------------------------------------------------------
+aside
+------------------------------------------------------------------------------->
+<section class="area_3" style="">
+    <aside>
+        <div class="navegador">
+            <svg viewBox="0 0 500 280">
+                <title>Asesoría web</title>
+                <desc>Gráfico de asesoría web, para ilustración.</desc>
+            
+                <rect id="barra" x="0" y="0" rx="0" ry="0"/>
+                <g id="circles">
+                    <circle cx="45" cy="15" r="5" />
+                    <circle cx="30" cy="15" r="5" />
+                    <circle cx="15" cy="15" r="5" />
+                </g>
+                <rect id="url" x=80 y="5" rx="3" ry="3"/>
+                <text id="link" x="90" y="18">https://www.oking.com/asesoria-web</text>
+                <g id="menu">
+                    <line x1="470" y1="12" x2="486" y2="12" />
+                    <line x1="470" y1="16" x2="486" y2="16" />
+                    <line x1="470" y1="20" x2="486" y2="20" />
+                </g>
+
+                <rect id="marca" x="10" y="42" rx="3" ry="3" />
+                <text x="14" y="62" class="logo">
+                    <tspan>Ok</tspan><tspan>ing</tspan>
+                </text>
+                <text x="280" y="70" class="servicio svg_titulo">Mejara</text>
+                <text x="326" y="70" class="servicio">Crecimiento</text>
+                <text x="398" y="70" class="servicio" >Objetivo</text>
+                <text x="452" y="70" class="servicio">Avance</text>
+                <line x1="0" y1="76" x2="500" y2="76" />
+
+                <g id="desarrollos">
+                    <text x="250" y="150" text-anchor="middle" class="diapositiva activo">mejora</text>
+                    <text x="250" y="150" text-anchor="middle" class="diapositiva">crecimiento</text>
+                    <text x="250" y="150" text-anchor="middle" class="diapositiva">objetivo</text>
+                    <text x="250" y="150" text-anchor="middle" class="diapositiva">avance</text>
+                </g>
+                <rect x="290.50" y="164" rx="0" ry="0" width="30" height="14" class="web" />
+                <text x="250" y="162" text-anchor="middle" class="descripcion">¿en que no quieres que se quede atrás tu</text>
+                <text x="250" y="174" text-anchor="middle" class="descripcion">pagina o sitio <tspan fill="white">web</tspan>?</text>
+                <rect x="216" y="194" rx="3" ry="3" width="70" height="18" class="svg_contacto_back"  />
+                <a href="contacto.html" role="link">
+                    <title>Contacto</title>
+                    <text class="svg_contacto" x="250" y="206" text-anchor="middle">Contacto</text>
+                </a>
+            </svg>
         </div>
-    </main>       
+    </aside>
 </section>
 <!------------------------------------------------------------------------------
 footer
@@ -183,6 +214,7 @@ Resolución no acta
 </section>
 
 <script src="l/i/header.js"></script>
-<script src="l/i/index.js"></script>
+<script src="l/i/svg.js"></script>
 </body>
 </html>
+

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <title>Contact | Oking</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../i_img/ok100.png" type="image/png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------------------------------------------------------------------------
+    CSS 
+    --------------------------------------------------------------------------->
+    <link rel='stylesheet' href='../i_css/root.css' />
+    <link rel='stylesheet' href='../i_css/logo/ok.css' />
+    <link rel='stylesheet' href='../i_css/header.css' />
+    <link rel='stylesheet' href='../i_css/contacto.css' />
+    <link rel='stylesheet' href='../i_css/footer.css' />
+    <!--------------------------------------------------------------------------
+    JavaScript
+    --------------------------------------------------------------------------->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section class="n-grid">
+<!------------------------------------------------------------------------------
+header
+------------------------------------------------------------------------------->
+<section class="area_1">
+    <header>
+        <h1>Ok<span>ing</span></h1>
+        <section>
+            <div>
+                <div id="idioma"></div>
+                <button id="idiomas" title="Select language">Select language</button>
+            </div>
+                <a href="contact.html" class="header_7" title="Contact">Contact</a>
+
+        </section>
+        <nav>
+            <section>
+                <ul class="maximo-oculto">
+                    <li><a href="index.html" class="header_11 enlace" title="Inicio"><i class='fas fa-home'></i></a>
+                        <div class="cubrir">
+                            <a href="index.html" class="con" title="Inicio"><i class='fas fa-home'></i></a>
+                        </div>
+                    </li>
+                    <li><a href="web-development.html" class="header_21 enlace" title="Development">Development</a>
+                        <div class="cubrir">
+                            <a href="web-development.html" class="con" title="Development">Development</a>
+                        </div>
+                    </li>
+                    <li><a href="web-maintenance.html" class="header_31 enlace" title="Maintenance">Maintenance</a>
+                        <div class="cubrir">
+                            <a href="web-maintenance.html" class="con" title="Maintenance">Maintenance</a>
+                        </div>
+                    </li>
+                    <li><a href="web-consultancy.html" class="header_41 enlace" title="Consultancy">Consultancy</a>
+                        <div class="cubrir">
+                            <a href="web-consultancy.html" class="con" title="Consultancy">Consultancy</a>
+                        </div>
+                    </li>
+                </ul>
+                <section class="mediano-oculto">
+                    <ul>
+                        <li><a href="index.html" class="header_12 enlace" title="Inicio"><i class='fas fa-home'></i></a>
+                            <div class="cubrir">
+                                <a href="index.html" class="con" title="Inicio"><i class='fas fa-home'></i></a>
+                            </div>
+                        </li>
+                       <li><a href="web-development.html" class="header_22 enlace" title="Development">Development</a>
+                            <div class="cubrir">
+                                <a href="web-development.html" class="con" title="Development">Development</a>
+                            </div>
+                        </li>
+                        <li><a href="web-maintenance.html" class="header_32 enlace" title="Maintenance" id="ancho">Maintenance</a>
+                            <div class="cubrir">
+                                <a href="web-maintenance.html" class="con" title="Maintenance">Maintenance</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="menu_tablet" onclick="Navegacion.tablet()" title="Menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <section class="mediano">
+                        <ul>
+                            <li><a href="web-consultancy.html" class="header_42 enlace" title="Consultancy">Consultancy</a>
+                                <div class="cubrir">
+                                    <a href="web-consultancy.html" class="con" title="Consultancy">Consultancy</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+                <section class="minimo-oculto">
+                    <button class="menu_celular" onclick="Navegacion.celular()" title="Menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <section class="minimo">
+                        <ul>
+                            <li><a href="index.html" class="header_13 enlace" title="Inicio">Inicio</a>
+                                <div class="cubrir">
+                                    <a href="index.html" class="con" title="Inicio">Inicio</a>
+                                </div>
+                            </li>
+                            <li><a href="web-development.html" class="header_23 enlace" title="Development">Development</a>
+                                <div class="cubrir">
+                                    <a href="web-development.html" class="con" title="Development">Development</a>
+                                </div>
+                            </li>
+                            <li><a href="web-maintenance.html" class="header_33 enlace" title="Maintenance" id="ancho">Maintenance</a>
+                                <div class="cubrir">
+                                    <a href="web-maintenance.html" class="con" title="Maintenance">Maintenance</a>
+                                </div>
+                            </li>
+                            <li><a href="web-consultancy.html" class="header_43 enlace" title="Consultancy">Consultancy</a>
+                                <div class="cubrir">
+                                    <a href="web-consultancy.html" class="con" title="Consultancy">Consultancy</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </section>
+        </nav>
+    </header>
+</section>
+<!------------------------------------------------------------------------------
+main
+------------------------------------------------------------------------------->
+<section class="area_2">
+    <main>
+        <section>
+            <h2 id="res">Contact</h2>
+            <section>
+                <label for="email">Email</label><br>
+                <input type="text" id="email" value="neury.developer@gmail.com" disabled=""><div class="info">
+                    <button id="copiar">
+                        <span id="dato" class="dato">Copy email</span>
+                        Copy
+                    </button>
+                </div>
+            </section>
+        </section>
+        <section>
+            <form name="contacto" id="contacto">
+                <label class="label" for="nombre">Name: &nbsp;
+                    <input type="text" name="nombre" id="nombre" required="" class="input"
+                        maxlength="50"
+                        pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,}$"
+                        title="Solo se aceptan letras y espacios en blanco."
+                    >
+                    <svg viewBox="0 0 20 20" class="icono">
+                        <title>Name icon</title>
+                        <path d="M0 0 L10 10 L0 20"></path>
+                    </svg>
+                    <svg viewBox="0 0 40 2" preserveAspectRatio="none" class="linea">
+                        <title>Line</title>
+                        <path d="M0 1 L40 1"/>
+                        <path d="M0 1 L40 1" class="focus"/>
+                        <path d="M0 1 L40 1" class="invalid"/>
+                        <path d="M0 1 L40 1" class="valid"/>
+                    </svg>
+                </label>
+                <label class="label">Email: &nbsp;
+                    <input type="email" name="correo" id="correo" required="" class="input" 
+                        maxlength="80"
+                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Ingrese una dirección de correo valida."
+                    >
+                    <svg viewBox="0 0 20 20" class="icono">
+                        <title>Email icon</title>
+                        <path d="M0 0 L10 10 L0 20"></path>
+                    </svg>
+                    <svg viewBox="0 0 40 2" preserveAspectRatio="none" class="linea">
+                        <title>Line</title>
+                        <path d="M0 1 L40 1"/>
+                        <path d="M0 1 L40 1" class="focus"/>
+                        <path d="M0 1 L40 1" class="invalid"/>
+                        <path d="M0 1 L40 1" class="valid"/>
+                    </svg>
+                </label>
+                <section style="width: 300px;margin: 16px 0px 0px 0px;">
+                    <label for="proyecto" class="envase">Project 
+                        <input type="radio" name="tema" id="proyecto" value="Proyecto"
+                            maxlength="12"
+                            pattern="^[A-Za-z]{3,}$"
+                        >
+                        <span class="tema"></span>
+                    </label>
+                    <label for="informacion" class="envase">Information
+                        <input type="radio" name="tema" id="informacion" value="Informacion"
+                            maxlength="12"
+                            pattern="^[A-Za-z]{3,}$"
+                        >
+                        <span class="tema"></span>
+                    </label>
+                    <label for="sugerencias" class="envase">Suggestions
+                        <input type="radio" name="tema" id="sugerencias" value="Sugerencias"
+                            maxlength="12"
+                            pattern="^[A-Za-z]{3,}$"
+                        >
+                        <span class="tema"></span>
+                    </label>
+                    <label for="otros" class="envase">Others
+                        <input type="radio" name="tema" id="otros" value="Otros"
+                            maxlength="12"
+                            pattern="^[A-Za-z]{3,}$"
+                        >
+                        <span class="tema"></span>
+                    </label>
+                </section>
+                <label class="label">Subject: &nbsp;
+                    <input type="text" name="asunto" id="asunto" required="" class="input"
+                        maxlength="50"
+                        pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,}$"
+                        title="Solo se aceptan letras y espacios en blanco."
+                    >
+                    <svg viewBox="0 0 20 20" class="icono">
+                        <title>Subject icon</title>
+                        <path d="M0 0 L10 10 L0 20"></path>
+                    </svg>
+                    <svg viewBox="0 0 40 2" preserveAspectRatio="none" class="linea">
+                        <title>Line</title>
+                        <path d="M0 1 L40 1"/>
+                        <path d="M0 1 L40 1" class="focus"/>
+                        <path d="M0 1 L40 1" class="invalid"/>
+                        <path d="M0 1 L40 1" class="valid"/>
+                    </svg>
+                </label>
+                <label class="label" style="margin: 2px 0px 0px 0px;">Message: &nbsp;
+                    <textarea name="mensaje" id="mensaje" placeholder="" required="" 
+                        maxlength="500"
+                        title="Solo se aceptan letras, espacios en blanco y los estos caracteres (,.¿?¡!@#). Cualquier otra cosa lo puede expresar con palabras."
+                    ></textarea>
+                    <svg viewBox="0 0 20 20" class="icono">
+                        <title>Icono de mensaja</title>
+                        <path d="M0 0 L10 10 L0 20"></path>
+                    </svg>
+                    <svg viewBox="0 0 40 2" preserveAspectRatio="none" class="linea">
+                        <title>Line</title>
+                        <path d="M0 1 L40 1"/>
+                        <path d="M0 1 L40 1" class="focus"/>
+                        <path d="M0 1 L40 1" class="invalid"/>
+                        <path d="M0 1 L40 1" class="valid"/>
+                    </svg>
+                </label>
+                <button type="submit" id="submit">Send</button>
+            </form>
+        </section>
+    </main>
+</section>
+<!------------------------------------------------------------------------------
+footer
+------------------------------------------------------------------------------->
+<section class="area_4">
+    <footer>
+        <section class="derechos">
+            <p>
+                <i class='fas fa-copyright'></i> 2021 - 2022 
+                <i class="icono icon-ok">&#xe800;</i> Oking.
+                <span>Designed and Developed by 
+                    <a href="https://www.behance.net/neury" title="Neury Aguasvivas" class="foco_a">Neury Aguasvivas</a>.
+                </span>
+            </p>
+        </section>
+    </footer>
+</section>
+</section>
+<!------------------------------------------------------------------------------
+Resolución no acta
+------------------------------------------------------------------------------->
+<section class="no-acta">
+    <i class='fas fa-tv'></i> 
+    <h3 class="titulo"><i class='fas fa-exclamation-circle'></i> Resolution not act</h3>
+    <p>Enlarge the screen or contact: <strong>neury.eleasar@outlook.es</strong></p>
+</section>
+
+<script src="../l/i/header.js"></script>
+<script src="../l/i/contacto.js"></script>
+<script src="../l/l/contacto.js"></script>
+</body>
+</html>
