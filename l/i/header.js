@@ -77,7 +77,7 @@ class Navegacion {
         } else {
             idioma.innerHTML = "";
             
-            if(URL.substr(0,3) === "en/index.html") {
+            if(URL.substr(0,4) === "/en/") {
                 idiomas.innerHTML = "Select language";
             } else {
                 idiomas.innerHTML = "Seleccionar idioma";
@@ -104,7 +104,7 @@ class Navegacion {
             document.querySelector(".header_22").style.color = "var(--n-color-3)";
         } else if(H2.matches && URL === "/mantenimiento-web.html" || H2.matches && URL === "/en/web-maintenance.html") {
             document.querySelector(".header_32").style.color = "var(--n-color-3)";
-        } else if(H2.matches && URL === "/asesoria-web.html" || H2.matches && URL === "/en/web-consultancy") {
+        } else if(H2.matches && URL === "/asesoria-web.html" || H2.matches && URL === "/en/web-consultancy.html") {
             document.querySelector(".header_42").style.color = "var(--n-color-3)";
         }
     }
