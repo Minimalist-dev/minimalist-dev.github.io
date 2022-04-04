@@ -28,7 +28,6 @@
 .n-grid > .area_1 > header > h1 > span { 
     color: var(--n-color-1); 
     text-shadow: var(--n-sombra-de-texto-1);
-    text-decoration: overline underline;
 }
 .n-grid > .area_1 > header > section {
     display: flex;
