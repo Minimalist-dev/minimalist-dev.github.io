@@ -11,9 +11,9 @@ class Contact {
         email.setSelectionRange(0, email.value.length);
         navigator.clipboard.writeText(email.value);
         
-        if(URL_CONTACTO === "/contacto") {
+        if(URL_CONTACTO === "/contacto.html") {
             dato.innerHTML = "Copiado";
-        } else if(URL_CONTACTO === "/en/contact") {
+        } else if(URL_CONTACTO === "/en/contact.html") {
             dato.innerHTML = "Copied";
         }
     }
@@ -40,9 +40,9 @@ Contact.areaDeTexto();
 
 copiar.onclick      = function() { Contact.copiarCorreo(); };
 copiar.onmouseout   = function() { 
-    if(URL_CONTACTO === "/contacto") {
+    if(URL_CONTACTO === "/contacto.html") {
         dato.innerHTML = "Copiar correo";
-    } else if(URL_CONTACTO === "/en/contact") {
+    } else if(URL_CONTACTO === "/en/contact.html") {
         dato.innerHTML = "Copy email";
     }
 };
