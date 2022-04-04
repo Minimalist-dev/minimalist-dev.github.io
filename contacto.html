@@ -227,7 +227,7 @@ main
                 </label>
                 <label class="label" style="margin: 2px 0px 0px 0px;">Mensaje: &nbsp;
                     <textarea name="mensaje" id="mensaje" placeholder="" required="" 
-                        maxlength="500"
+                        maxlength="140"
                         title="Solo se aceptan letras, espacios en blanco y los estos caracteres (,.¿?¡!@#). Cualquier otra cosa lo puede expresar con palabras."
                     ></textarea>
                     <svg viewBox="0 0 20 20" class="icono">
@@ -272,6 +272,21 @@ Resolución no acta
     <h3 class="titulo"><i class='fa fa-exclamation-circle'></i> Resolución no acta</h3>
     <p>Amplie la pantalla o comuniquese con: <strong>neury.eleasar@outlook.es</strong></p>
 </section>
+<!------------------------------------------------------------------------------ 
+Enviar: modal
+------------------------------------------------------------------------------->
+<div id="enviar" class="enviar">
+    <div class="contenedor">
+        <p><span>Para:</span> neury.developer@gmail.com</p>
+        <p><span>Asunto:</span> <span id="subject"></span></p>
+        <p><span>Mensaje:</span><br><span id="message"></span></p>
+        <button id="cerrar">Cerrar</button>  
+        <p>
+            Actualmente la base de datos esta en mantenimiento, puede abrir su correo en otra ventana, 
+            y copiar y pegar el mensaje que ha escrito. Lamentamos las molestias.
+        </p>
+    </div>
+</div>
 
 <script src="l/i/header.js"></script>
 <script src="l/i/contacto.js"></script>

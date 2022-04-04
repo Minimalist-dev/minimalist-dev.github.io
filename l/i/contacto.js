@@ -31,20 +31,13 @@ class Contact {
         area.oninvalid  = function() { area.dataset.touched = true; };
         area.onblur     = function() { if (area.value !== '') area.dataset.touched = true; };
     }
-//    static
-//    selecconar() {
-//        let select = document.querySelector('select');
-//        
-//        select.oninvalid  = function() { select.dataset.touched = true; };
-//        select.onblur     = function() { if (selet.value !== '') select.dataset.touched = true; };
-//    }
 }
-Contact.entradas();
-Contact.areaDeTexto();
-//Contact.selecconar();
 
 /* Disparadores
 --------------------------------------------------------------------------------*/
+Contact.entradas();
+Contact.areaDeTexto();
+
 copiar.onclick      = function() { Contact.copiarCorreo(); };
 copiar.onmouseout   = function() { 
     if(URL_CONTACTO === "/contacto") {
