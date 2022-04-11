@@ -8,11 +8,8 @@
 .n-grid {
     display: grid;
     grid-template-columns: 25% 25% 25% auto;
-    /*grid-gap: 0.625em;*/
 }
-.n-grid > section { 
-    /*color: var(--n-color-2);*/
-}
+.n-grid > section { }
 .n-grid > .area_1 { grid-area: 1 / span 4 / 2 / 5; }
 .n-grid > .area_2 { grid-area: 2 / 1 / span 2 / span 2; }
 .n-grid > .area_3 { grid-area: 2 / 3 / span 2 / span 2; }
@@ -20,9 +17,7 @@
 
 /* main
 --------------------------------------------------------------------------------*/
-.n-grid > .area_2 {
-    /*border: 1px solid var(--n-color-2);*/
-}
+.n-grid > .area_2 { }
 .n-grid > .area_2 > main {
     position: absolute;
     top: 50%;
@@ -30,7 +25,6 @@
     
     width: 50%;
     padding: 0px 24px 0px 32px;
-    /*border: 1px solid var(--n-color-2);*/
 }
 .n-grid > .area_2 > main > h2 {
     color: var(--n-color-4);
@@ -47,18 +41,15 @@
     color: var(--n-color-2);
     text-decoration-line: underline;
     text-decoration-style: solid;
-    /*text-decoration-color: var(--n-color-2);*/
+    text-decoration-color: var(--n-color-2);
 }
 .dev_activio {
     color: var(--n-color-3);
-    /*text-decoration: none;*/
     text-decoration-style: wavy;
 }
 /* Aside
 --------------------------------------------------------------------------------*/
-.n-grid > .area_3 {
-    /*border: 1px solid var(--n-color-2);*/
-}
+.n-grid > .area_3 { }
 .n-grid > .area_3 > aside {
     position: absolute;
     top: 50%;
@@ -66,7 +57,6 @@
     
     width: 50%;
     padding: 0px 32px 0px 0px;
-    /*border: 1px solid var(--n-color-2);*/
 }
 /* Aside: navegador
 --------------------------------------------------------------------------------*/
@@ -86,9 +76,7 @@ svg > rect#barra {
     width: 500px;
     height: 30px;
 }
-svg > circle {
-     
-}
+svg > circle {}
 svg > #circles > :nth-child(1) { fill: var(--n-color-3); }
 svg > #circles > :nth-child(2) { fill: var(--n-color-5); }
 svg > #circles > :nth-child(3) { fill: var(--n-color-6); }
@@ -114,7 +102,6 @@ svg > .logo {
     fill: var(--n-color-1);
     font-size: 20px;
     font-weight: bold;
-    /*letter-spacing: -0.07em;*/
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .svg_titulo { 
@@ -181,17 +168,12 @@ svg > text {
         text-align: center;
         padding: 0px 32px;
     }
-    .n-grid > .area_2 > main > h2 {
-        font-size: 3.30em;
-    }
-    .n-grid > .area_2 > main > p {
-        font-size: 1.20em;
-    }
+    .n-grid > .area_2 > main > p { line-height: 1.50; }
     
     /* Aside
     --------------------------------------------------------------------------------*/
     .n-grid > .area_3 > aside {
-        top: 100%;
+        top: calc(100% - 25px);
         transform: translateY(-0%);
 
         width: 100%;
@@ -205,19 +187,18 @@ svg > text {
     .n-grid > .area_2 > main {
         width: 100%;
         text-align: center;
-        padding: 0px 12px;
+        padding: 0px 36px;
     }
-    .n-grid > .area_2 > main > h2 {
-        font-size: 2.30em;
-    }
+    .n-grid > .area_2 > main > h2 { font-size: 2.30em; }
     .n-grid > .area_2 > main > p {
-        font-size: 1.00em;
+        font-size: 1em;
+        line-height: 1.40;
     }
     
     /* Aside
     --------------------------------------------------------------------------------*/
     .n-grid > .area_3 > aside {
-        top: 100%;
+        top: calc(100% - 32px);
         transform: translateY(-0%);
 
         width: 100%;
