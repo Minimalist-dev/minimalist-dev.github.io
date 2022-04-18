@@ -135,6 +135,12 @@ new Header();
 idiomas.onclick = function() {
     Header.idioma();
 };
+menuTablet.onclick = function() {
+    Header.tablet();
+};
+menuCelular.onclick = function() {
+    Header.celular();
+};
 
 /* header: exportaciones
 --------------------------------------------------------------------------------*/
