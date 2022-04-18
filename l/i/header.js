@@ -9,8 +9,8 @@ const H1    = window.matchMedia("(min-width: 801px)");
 const H2    = window.matchMedia("(min-width: 551px) and (max-width: 800px)");
 const H3    = window.matchMedia("(max-width: 550px)");
 
-let _url = 0;
-//const url = {
+let _url    = 0;
+//const url   = {
 //    uno: [
 //        "/github/minimalist-dev.github.io/",
 //        "/github/minimalist-dev.github.io/index.html",
@@ -45,7 +45,7 @@ const url = {
     ]
 };
 
-class Navegacion {
+class Header {
     constructor() {
         url.uno.find(function(element, index, array) {
             if(element === URL) {
@@ -60,12 +60,10 @@ class Navegacion {
 
         switch(true) {
             case url.uno.includes(URL):
-                Navegacion.mediaUno(H1);
-                H1.addListener(Navegacion.mediaUno);
-                Navegacion.mediaDos(H2);
-                H2.addListener(Navegacion.mediaDos);
-                Navegacion.mediaTres(H3);
-                H3.addListener(Navegacion.mediaTres);
+                Header.media();
+                H1.addListener(Header.media);
+                H2.addListener(Header.media);
+                H3.addListener(Header.media);
                 break;
             case url.dos.includes(URL):
                 document.querySelector(".header_7").style.color = "var(--n-color-3)";
@@ -86,7 +84,7 @@ class Navegacion {
             menuTablet.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`;
         }
         
-        Navegacion.lanzar(detonador);
+        Header.lanzar(detonador);
     }
     static
     celular() {
@@ -98,7 +96,7 @@ class Navegacion {
             menuCelular.innerHTML = `<i class="fa fa-bars" aria-hidden="true"></i>`;
         }
         
-        Navegacion.lanzar(detonador);   
+        Header.lanzar(detonador);   
     }
     static
     idioma() {
@@ -120,49 +118,24 @@ class Navegacion {
             }
         }
     }
-    static 
-    mediaUno(H1) {
-        if(H1.matches && 1 === _url) {
-            document.querySelector(".header_11").style.color = "var(--n-color-3)";
-        } else if(H1.matches && 2 === _url) {
-            document.querySelector(".header_21").style.color = "var(--n-color-3)";
-        } else if(H1.matches && 3 === _url) {
-            document.querySelector(".header_31").style.color = "var(--n-color-3)";
-        } else if(H1.matches && 4 === _url) {
-            document.querySelector(".header_41").style.color = "var(--n-color-3)";
-        } 
-    }
-    static 
-    mediaDos(H2) {
-        if(H2.matches && 1 === _url) {
-            document.querySelector(".header_12").style.color = "var(--n-color-3)";
-        } else if(H2.matches && 2 === _url) {
-            document.querySelector(".header_22").style.color = "var(--n-color-3)";
-        } else if(H2.matches && 3 === _url) {
-            document.querySelector(".header_32").style.color = "var(--n-color-3)";
-        } else if(H2.matches && 4 === _url) {
-            document.querySelector(".header_42").style.color = "var(--n-color-3)";
-        }
-    }
-    static 
-    mediaTres(H3) {
-        if(H3.matches && 1 === _url) {
-            document.querySelector(".header_13").style.color = "var(--n-color-3)";
-        } else if(H3.matches && 2 === _url) {
-            document.querySelector(".header_23").style.color = "var(--n-color-3)";
-        } else if(H3.matches && 3 === _url) {
-            document.querySelector(".header_33").style.color = "var(--n-color-3)";
-        } else if(H3.matches && 4 === _url) {
-            document.querySelector(".header_43").style.color = "var(--n-color-3)";
+    static
+    media() {
+        for(let i = 1; i < 5; i++) {
+            if(H1.matches && i === _url) { document.querySelector(".header_" + i + 1).style.color = "var(--n-color-3)"; } 
+            if(H2.matches && i === _url) { document.querySelector(".header_" + i + 2).style.color = "var(--n-color-3)"; } 
+            if(H3.matches && i === _url) { document.querySelector(".header_" + i + 3).style.color = "var(--n-color-3)"; }
         }
     }
 };
 
 /* header: disparadores
 --------------------------------------------------------------------------------*/
-new Navegacion();
+new Header();
 
 idiomas.onclick = function() {
-    Navegacion.idioma();
+    Header.idioma();
 };
 
+/* header: exportaciones
+--------------------------------------------------------------------------------*/
+export { url };
