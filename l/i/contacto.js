@@ -1,18 +1,15 @@
-import { url } from "./header.js";
-
+import { URL, url } from "./header.js";
 
 let email   = document.querySelector('#email');
 let copiar  = document.querySelector('#copiar');
 let dato    = document.querySelector('#dato');
 
-const URL_CONTACTO = window.location.pathname;
-
 class Contact {
     constructor() {
 //        let urlES, urlEN;
 //        import('./header.js').then(function(api) {
-//            urlES = api.url.dos[0];
-//            urlEN = api.url.dos[1];
+//            urlES = api.url.es[5];
+//            urlEN = api.url.en[5];
 //        });
     }
     static
@@ -24,9 +21,9 @@ class Contact {
         email.setSelectionRange(0, email.value.length);
         navigator.clipboard.writeText(email.value);
         
-        if(URL_CONTACTO === url.dos[0]) {
+        if(URL === url.es[5]) {
             dato.innerHTML = "Copiado";
-        } else if(URL_CONTACTO === url.dos[1]) {
+        } else if(URL === url.en[5]) {
             dato.innerHTML = "Copied";
         }
         
@@ -63,11 +60,8 @@ Contact.areaDeTexto();
 
 copiar.onclick      = function() { Contact.copiarCorreo(); };
 copiar.onmouseout   = function() { 
-    if(URL_CONTACTO === url.dos[0]) {
-        dato.innerHTML = "Copiar correo";
-    } else if(URL_CONTACTO === url.dos[1]) {
-        dato.innerHTML = "Copy email";
-    }
+    if(URL === url.es[5]) { dato.innerHTML = "Copiar correo";   } 
+    if(URL === url.en[5]) { dato.innerHTML = "Copy email";      }
 };
   
 document.addEventListener("DOMContentLoaded", Contact.tocar);

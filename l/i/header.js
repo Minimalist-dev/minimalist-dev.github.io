@@ -11,63 +11,63 @@ const H3    = window.matchMedia("(max-width: 550px)");
 
 let _url    = 0;
 //const url   = {
-//    uno: [
+//    es: [
 //        "/github/minimalist-dev.github.io/",
 //        "/github/minimalist-dev.github.io/index.html",
-//        "/github/minimalist-dev.github.io/en/index.html",
 //        "/github/minimalist-dev.github.io/desarrollo-web.html",
-//        "/github/minimalist-dev.github.io/en/web-development.html",
 //        "/github/minimalist-dev.github.io/mantenimiento-web.html",
-//        "/github/minimalist-dev.github.io/en/web-maintenance.html",
 //        "/github/minimalist-dev.github.io/asesoria-web.html",
-//        "/github/minimalist-dev.github.io/en/web-consultancy.html"
+//        "/github/minimalist-dev.github.io/contacto.html"
 //    ],
-//    dos: [
-//        "/github/minimalist-dev.github.io/contacto.html", 
+//    en: [
+//        "/github/minimalist-dev.github.io/en/",
+//        "/github/minimalist-dev.github.io/en/index.html",
+//        "/github/minimalist-dev.github.io/en/web-development.html",
+//        "/github/minimalist-dev.github.io/en/web-maintenance.html",
+//        "/github/minimalist-dev.github.io/en/web-consultancy.html",
 //        "/github/minimalist-dev.github.io/en/contact.html"
 //    ]
 //};
 const url = {
-    uno: [
+    es: [
         "/",
         "/index.html",
-        "/en/index.html",
         "/desarrollo-web.html",
-        "/en/web-development.html",
         "/mantenimiento-web.html",
-        "/en/web-maintenance.html",
         "/asesoria-web.html",
-        "/en/web-consultancy.html"
+        "/contacto.html"
     ],
-    dos: [
-        "/contacto.html", 
+    en: [
+        "/en/",
+        "/en/index.html",
+        "/en/web-development.html",
+        "/en/web-maintenance.html",
+        "/en/web-consultancy.html",
         "/en/contact.html"
     ]
 };
 
 class Header {
     constructor() {
-        url.uno.find(function(element, index, array) {
-            if(element === URL) {
-                if(index === 0 || index === 1 || index === 2)   { _url = 1; } 
-                else if(index === 3 || index === 4)             { _url = 2; } 
-                else if(index === 5 || index === 6)             { _url = 3; } 
-                else if(index === 7 || index === 8)             { _url = 4; }
+        for(let i in url.es) {
+            if(URL === url.es[i] || URL === url.en[i]) {
+                if(i === "0" || i === "1")  { _url = 1; } 
+                else if(i === "2")          { _url = 2; } 
+                else if(i === "3")          { _url = 3; } 
+                else if(i === "4")          { _url = 4; }
             } 
+        }
 
-            return element === URL;
-        });
-
-        switch(true) {
-            case url.uno.includes(URL):
+        switch(URL) {
+            case url.es[5]:
+            case url.en[5]:
+                document.querySelector(".header_7").style.color = "var(--n-color-3)";
+                break;
+            default:
                 Header.media();
                 H1.addListener(Header.media);
                 H2.addListener(Header.media);
                 H3.addListener(Header.media);
-                break;
-            case url.dos.includes(URL):
-                document.querySelector(".header_7").style.color = "var(--n-color-3)";
-                break;
         }
     }
     static
@@ -102,19 +102,41 @@ class Header {
     idioma() {
         let idioma = document.querySelector("#idioma");
         
-        if(idiomas.innerHTML === "Seleccionar idioma") {
-            idioma.innerHTML = `<a href="index.html">Español</a><a href="en/index.html">English</a>`;
-            idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
-        } else if(idiomas.innerHTML === "Select language") {
-            idioma.innerHTML = `<a href="../index.html">Español</a><a href="index.html">English</a>`;
-            idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
-        } else {
-            idioma.innerHTML = "";
+        for(let i in url.es) {
+            let es = url.es[i].split("/");
+            let en = url.en[i].split("/");
             
-            if(URL.substr(0,4) === "/en/") {
-                idiomas.innerHTML = "Select language";
-            } else {
-                idiomas.innerHTML = "Seleccionar idioma";
+            if(URL === url.es[i] || URL === url.en[i]) {
+//                if(idiomas.innerHTML === "Seleccionar idioma") {
+//                    idioma.innerHTML = `<a href="${es[3]}">Español</a><a href="en/${en[4]}">English</a>`;
+//                    idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
+//                } else if(idiomas.innerHTML === "Select language") {
+//                    idioma.innerHTML = `<a href="../${es[3]}">Español</a><a href="${en[4]}">English</a>`;
+//                    idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
+//                } else {
+//                    idioma.innerHTML = "";
+//
+//                    if(URL.substr(0, 36) === "/github/minimalist-dev.github.io/en/") {
+//                        idiomas.innerHTML = "Select language";
+//                    } else {
+//                        idiomas.innerHTML = "Seleccionar idioma";
+//                    }
+//                }
+                if(idiomas.innerHTML === "Seleccionar idioma") {
+                    idioma.innerHTML = `<a href="${es[1]}">Español</a><a href="en/${en[2]}">English</a>`;
+                    idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
+                } else if(idiomas.innerHTML === "Select language") {
+                    idioma.innerHTML = `<a href="../${es[1]}">Español</a><a href="${en[2]}">English</a>`;
+                    idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
+                } else {
+                    idioma.innerHTML = "";
+
+                    if(URL.substr(0, 4) === "/en/") {
+                        idiomas.innerHTML = "Select language";
+                    } else {
+                        idiomas.innerHTML = "Seleccionar idioma";
+                    }
+                }
             }
         }
     }
@@ -144,4 +166,4 @@ menuCelular.onclick = function() {
 
 /* header: exportaciones
 --------------------------------------------------------------------------------*/
-export { url };
+export { URL, url };
