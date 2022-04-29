@@ -18,7 +18,8 @@ class Contacto {
             correo: correo.value, 
             tema: tema.value, 
             asunto: asunto.value, 
-            mensaje: mensaje.value
+            mensaje: mensaje.value,
+            submit: submit.value
         });
         
         fetch('https://minimalist-dev.herokuapp.com/oking', {
