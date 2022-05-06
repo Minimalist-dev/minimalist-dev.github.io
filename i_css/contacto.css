@@ -52,8 +52,12 @@
     color: var(--n-color-5);
     background-color: var(--n-color-1);
     font-weight: bold;
-    border: 2px solid var(--n-color-1);
-    padding: 4px;
+    border: var(--n-border-0);
+    padding: 0.50em;
+}
+.n-grid > .area_2 > main > section:nth-child(1) .info > button:focus {
+    border: var(--n-border-2);
+    border-radius: 0.20em;
 }
 .n-grid > .area_2 > main > section:nth-child(1) .info > button > .dato {
     visibility: hidden;
@@ -189,9 +193,15 @@
     display: block;
     position: relative;
     margin-bottom: 8px;
-    padding-left: 20px;
+    border: var(--n-border-0);
+    padding: 0.50em 0 0.20em 1.50em;
+    outline: none;
     cursor: pointer;
     user-select: none;
+}
+.n-grid > .area_2 > main > section > form > section > .envase:focus {
+    border: var(--n-border-2);
+    border-radius: 0.20em;
 }
 .n-grid > .area_2 > main > section > form > section > .envase > input {
     position: absolute;
@@ -200,7 +210,7 @@
 }
 .n-grid > .area_2 > main > section > form > section > .envase > .tema {
     position: absolute;
-    top: -2px;
+    top: 0.40em;
     left: 0;
     background-color: var(--n-color-2);
     width: 15px;
@@ -213,17 +223,16 @@
 .n-grid > .area_2 > main > section > form > section > .envase > input:checked ~ .tema {
     background-color: var(--n-color-3);
 }
-.n-grid > .area_2 > main > section > form > section > .envase > .tema:after {
-    content: "";
-    display: none;
-    position: absolute;
-}
 .n-grid > .area_2 > main > section > form > section > .envase input:checked ~ .tema:after {
     display: block;
 }
 .n-grid > .area_2 > main > section > form > section > .envase > .tema:after {
+    content: "";
+    display: none;
+    position: absolute;
     top: 0.37em;
     left: 0.37em;
+    
     background-color: var(--n-color-3);
     width: 6px;
     height: 6px;
@@ -237,12 +246,17 @@
     background-color: var(--n-color-5);
     font-size: 1em;
     font-weight: bold;
-    border: 2px solid var(--n-color-5);
+    border: var(--n-border-5);
     padding: 6px 12px;
     border-radius: 0.25rem;
 }
+.n-grid > .area_2 > main > section > form > button[type="submit"]:hover {
+    box-shadow: var(--n-sombra-2);
+}
 .n-grid > .area_2 > main > section > form > button[type="submit"]:focus {
-    border: 2px dotted var(--n-color-1);
+    color: var(--n-color-2);
+    background-color: var(--n-color-1);
+    border: var(--n-border-2);
 }
 
 /* Mensaje

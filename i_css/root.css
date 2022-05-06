@@ -103,42 +103,32 @@ input:disabled { cursor: not-allowed; }
     --n-color-6-8:          rgba(148, 32, 30, 0.8);
     --n-color-6-9:          rgba(148, 32, 30, 0.9);
     
-    --n-transicion:             all 0.8s ease-in-out;
+    --n-border-0:   0.10em solid var(--n-color-0);
+    --n-border-1:   0.10em solid var(--n-color-1);
+    --n-border-2:   0.10em solid var(--n-color-2);
+    --n-border-3:   0.10em solid var(--n-color-3);
+    --n-border-4:   0.10em solid var(--n-color-4);
+    --n-border-5:   0.10em solid var(--n-color-5);
+    --n-border-6:   0.10em solid var(--n-color-6);
     
-    /*--n-radio:                  8px;*/
-    /*--n-relleno:                8px;*/
+    --n-sombra-0: 0 0 0.00em var(--n-color-0), 0 0 0.00em var(--n-color-0), 0 0 0.00em var(--n-color-0);
+    --n-sombra-1: 0 0 0.20em var(--n-color-1), 0 0 0.20em var(--n-color-1), 0 0 0.40em var(--n-color-1);
+    --n-sombra-2: 0 0 0.20em var(--n-color-2), 0 0 0.20em var(--n-color-2), 0 0 0.40em var(--n-color-2);
+    --n-sombra-3: 0 0 0.20em var(--n-color-3), 0 0 0.20em var(--n-color-3), 0 0 0.40em var(--n-color-3);
+    --n-sombra-4: 0 0 0.20em var(--n-color-4), 0 0 0.20em var(--n-color-4), 0 0 0.40em var(--n-color-4);
+    --n-sombra-5: 0 0 0.20em var(--n-color-5), 0 0 0.20em var(--n-color-5), 0 0 0.40em var(--n-color-5);
+    --n-sombra-6: 0 0 0.20em var(--n-color-6), 0 0 0.20em var(--n-color-6), 0 0 0.40em var(--n-color-6);
+    
+    --n-transicion:             all 0.8s ease-in-out;
     
     --n-sombra-de-texto-1:  -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     --n-sombra-de-texto-2:  -1px 0 #8a8a8a, 0 1px #8a8a8a, 1px 0 #8a8a8a, 0 -1px #8a8a8a;
-    --n-sombra-de-texto-3:  -1px 0 #b9935a, 0 1px #b9935a, 1px 0 #b9935a, 0 -1px #b9935a;
-    /*--n-sombra-de-texto-verde:  -1px 0 #457725, 0 1px #457725, 1px 0 #457725, 0 -1px #457725;*/
-    --n-sombra-de-texto-6:  -1px 0 #dc5856, 0 1px #dc5856, 1px 0 #dc5856, 0 -1px #dc5856;
     
-    --n-sombra-1:   0 0 20px white, 0 0 30px white;
-    --n-sombra-1-1: 0 0 10px white, 0 0 40px white, 0 0 80px white;
-    --n-sombra-2:   0 0 20px #1c1d22, 0 0 30px #1c1d22;
-    --n-sombra-2-1: 0 0 10px #1c1d22, 0 0 40px #1c1d22, 0 0 80px #1c1d22;
-    --n-sombra-3:   0 0 20px #b9935a, 0 0 30px #b9935a;
-    --n-sombra-3-1: 0 0 10px #b9935a, 0 0 40px #b9935a, 0 0 80px #b9935a;
-    /*--n-sombra-verde:           0 0 20px #457725, 0 0 30px #457725;*/
-    /*--n-sombra-caja-verde:      0 0 10px #457725, 0 0 40px #457725, 0 0 80px #457725;*/
-    /*--n-sombra-rojo:            0 0 20px #901E1D, 0 0 30px #901E1D;*/
-    /*--n-sombra-caja-rojo:       0 0 10px #901E1D, 0 0 40px #901E1D, 0 0 80px #901E1D;*/
 }
 
 /* Estilo global
 --------------------------------------------------------------------------------*/
 .color_uno { color: var(--n-color-3) !important; }
-a:focus {
-    border-bottom: 2px dotted var(--n-color-4);
-}
-.foco_a:focus {
-    border-bottom: 2px dotted var(--n-color-1);
-}
-#copiar:focus,
-button:focus {
-    border: 2px dotted var(--n-color-4);
-}
 input:focus,
 textarea:focus {
     border-right: 2px dotted var(--n-color-4);

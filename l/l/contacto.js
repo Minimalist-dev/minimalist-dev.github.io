@@ -24,8 +24,10 @@ class Contacto {
         
         fetch('https://minimalist-dev.herokuapp.com/oking', {
 //        fetch('http://localhost:3000/oking', {
+            headers: { 
+                'Content-Type': 'application/json' 
+            },
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
             body: datos
         }).then(function(response) {
             if(response.ok) { return response.text(); } 

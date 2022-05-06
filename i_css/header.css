@@ -38,7 +38,6 @@
     font-size: 0.90em;
     width: auto;
     margin: 0px 32px 0px 0px;
-    /*border: 1px solid var(--n-color-2);*/
 }
 .n-grid > .area_1 > header > section > div {
     display: flex;
@@ -47,20 +46,39 @@
 .n-grid > .area_1 > header > section a {
     color: var(--n-color-4);
     margin-left: 8px;
+    border: var(--n-border-0);
+    padding: 0.50em 0.25em 0 0.25em;
 }
 .n-grid > .area_1 > header > section > div > button:hover,
 .n-grid > .area_1 > header > section a:hover {
     color: var(--n-color-4);
     text-decoration: underline;
 }
+.n-grid > .area_1 > header > section a:focus,
+.n-grid > .area_1 > header > section > div > button:focus,
+.n-grid > .area_1 > header > section > div > div#idioma > a:focus {
+    border: var(--n-border-2);
+    border-radius: 0.20em;
+}
 .n-grid > .area_1 > header > section > div > button {
     color: var(--n-color-4);
     background: var(--n-color-1);
     font-size: 1.0em;
     margin: 0;
-    margin-top: -2px;
     margin-left: 8px;
-    padding: 0px;
+    border: var(--n-border-0);
+    padding: 0.25em 0.25em 0 0.25em;
+}
+.n-grid > .area_1 > header > section > div > div#idioma {
+    display: flex;
+    align-items: center;
+    font-size: 1.0em;
+}
+.n-grid > .area_1 > header > section > div > div#idioma > a {
+    font-size: 1.0em;
+    margin: 0;
+    border: var(--n-border-0);
+    padding: 0.50em 0.25em 0 0.25em;
 }
 .n-grid > .area_1 > header > nav {
     display: flex;
@@ -71,7 +89,6 @@
     right: 0;
     width: auto;
     margin: 32px 32px 0px 0px;
-    /*border: 1px solid var(--n-color-2);*/
     padding: 0px;
 }
 .n-grid > .area_1 > header > nav > section > *,
@@ -101,21 +118,35 @@
 .n-grid > .area_1 > header > nav ul > li > a {
     position: relative;
     color: var(--n-color-4);
+    border: var(--n-border-0);
+    padding: 0.50em 0.50em 0.25em 0.50em;
+}
+.n-grid > .area_1 > header > nav ul > li > a:focus {
+    border: var(--n-border-2);
+    border-radius: 0.20em;
 }
 .mediano-oculto {
     display: flex;
     flex-direction: row;
 }
 .n-grid > .area_1 > header > nav button {
-    position: relative;
     color: var(--n-color-4);
-    background-color: var(--n-color-1);
+    background-color: var(--n-color-0);
     font-size: 1.0em;
-    margin: -2px 0 0 16px;
-    padding: 0;
+    margin-top: 0;
+    border: var(--n-border-0);
+    padding: 0.30em 0.50em 0.25em 0.50em;
+}
+.n-grid > .area_1 > header > nav button:focus {
+    border: var(--n-border-2);
+    border-radius: 0.20em;
 }
 .n-grid > .area_1 > header > nav button.menu_tablet {
-    margin-left: 16px;
+    position: fixed;
+    top: 3.30em;
+    right: 2.50em;
+    
+    padding: 0.30em 0.50em 0.25em 0.50em;
 }
 .n-grid > .area_1 > header > nav > section > ul > li > .cubrir,
 .n-grid > .area_1 > header > nav > section > section > ul > li > .cubrir,
@@ -145,6 +176,12 @@
 }
 .n-grid > .area_1 > header > nav ul > li > .cubrir > .con {
     color: var(--n-color-3);
+    border: var(--n-border-0);
+    padding: 0.50em 0.50em 0.25em 0.50em;
+}
+.n-grid > .area_1 > header > nav ul > li > .cubrir > .con:focus {
+    border: var(--n-border-2);
+    border-radius: 0.20em;
 }
 .n-grid > .area_1 > header > nav > section > ul > li:hover .cubrir,
 .n-grid > .area_1 > header > nav > section > section > ul > li:hover .cubrir,
@@ -175,22 +212,13 @@
 /* Maquetado
 --------------------------------------------------------------------------------*/
 @media screen and (min-width: 551px) and (max-width: 800px) {
-    .n-grid > .area_1 > header {
-        padding: 12px 0px 10px 0px;
-    }
-    .n-grid > .area_1 > header > h1 {
-        margin: 0px 0px 0px 24px;
-    }
-    .n-grid > .area_1 > header > section {
-        margin: 0px 24px 0px 0px;
-    }
     .n-grid > .area_1 > header > nav {
-        margin: 24px 24px 0px 0px;
+        right: 3em;
     }
     .n-grid > .area_1 > header > nav > section > .mediano-oculto > .mediano {
         display: none;
         position: fixed;
-        top: 61px;
+        top: 6em;
         left: 0;
         right: 0;
         z-index: 1;
@@ -211,18 +239,27 @@
         flex-direction: column-reverse;
         
         left: 102px;
-        margin: 12px 0px 0px 0px;
     }
     .n-grid > .area_1 > header > section > div {
-        margin-top: 6px;
+    }
+    .n-grid > .area_1 > header > section > div > div#idioma {
+        padding: 0.20em 0.50em;
+    }
+    .n-grid > .area_1 > header > section > div > button {
+        padding: 0.50em 0.50em;
+    }
+    .n-grid > .area_1 > header > section > a {
+        width: 4.50em;
+        margin-left: 2em;
     }
     .n-grid > .area_1 > header > nav {
-        margin: 30px 12px 0px 0px;
+        right: 3em;
+        margin: 0.50em 0 0 0;
     }
     .n-grid > .area_1 > header > nav button {
         position: absolute;
-        top: -6px;
-        right: 0px;
+        top: 0;
+        right: 0;
         
         font-size: 1.50em;
     }

@@ -23,8 +23,12 @@
 .n-grid > .area_4 > footer > .derechos > p a {
     color: var(--n-color-1);
     text-decoration: underline;
+    border: var(--n-border-0);
 }
-
+n-grid > .area_4 > footer > .derechos > p a:focus {
+    border: var(--n-border-1);
+    border-radius: 0.20em;
+}
 /* Maquetado
 --------------------------------------------------------------------------------*/
 @media screen and (min-width: 551px) and (max-width: 800px) {
