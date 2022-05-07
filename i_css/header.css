@@ -38,16 +38,23 @@
     font-size: 0.90em;
     width: auto;
     margin: 0px 32px 0px 0px;
+    padding: 0;
 }
 .n-grid > .area_1 > header > section > div {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 .n-grid > .area_1 > header > section a {
     color: var(--n-color-4);
-    margin-left: 8px;
+    font-size: 1em;
+    text-decoration-line: underline; 
+    text-decoration-style: solid;
+    text-decoration-color: var(--n-color-2-3);
+    margin: 0 0 0 0.50em;
     border: var(--n-border-0);
-    padding: 0.50em 0.25em 0 0.25em;
+    padding: 0.25em;
 }
 .n-grid > .area_1 > header > section > div > button:hover,
 .n-grid > .area_1 > header > section a:hover {
@@ -57,28 +64,32 @@
 .n-grid > .area_1 > header > section a:focus,
 .n-grid > .area_1 > header > section > div > button:focus,
 .n-grid > .area_1 > header > section > div > div#idioma > a:focus {
+    text-decoration-color: var(--n-color-2);
     border: var(--n-border-2);
     border-radius: 0.20em;
 }
 .n-grid > .area_1 > header > section > div > button {
     color: var(--n-color-4);
     background: var(--n-color-1);
-    font-size: 1.0em;
+    font-size: 1em;
     margin: 0;
     margin-left: 8px;
     border: var(--n-border-0);
-    padding: 0.25em 0.25em 0 0.25em;
+    padding: 0.25em;
 }
 .n-grid > .area_1 > header > section > div > div#idioma {
     display: flex;
     align-items: center;
-    font-size: 1.0em;
+    font-size: 1em;
 }
 .n-grid > .area_1 > header > section > div > div#idioma > a {
-    font-size: 1.0em;
+    font-size: 1em;
+    text-decoration-line: underline; 
+    text-decoration-style: solid;
+    text-decoration-color: var(--n-color-2-3);   
     margin: 0;
     border: var(--n-border-0);
-    padding: 0.50em 0.25em 0 0.25em;
+    padding: 0.25em;
 }
 .n-grid > .area_1 > header > nav {
     display: flex;
@@ -119,9 +130,10 @@
     position: relative;
     color: var(--n-color-4);
     border: var(--n-border-0);
-    padding: 0.50em 0.50em 0.25em 0.50em;
+    padding: 0.25em;
 }
 .n-grid > .area_1 > header > nav ul > li > a:focus {
+    text-decoration: underline;
     border: var(--n-border-2);
     border-radius: 0.20em;
 }
@@ -177,7 +189,7 @@
 .n-grid > .area_1 > header > nav ul > li > .cubrir > .con {
     color: var(--n-color-3);
     border: var(--n-border-0);
-    padding: 0.50em 0.50em 0.25em 0.50em;
+    padding: 0.25em;
 }
 .n-grid > .area_1 > header > nav ul > li > .cubrir > .con:focus {
     border: var(--n-border-2);
@@ -200,6 +212,9 @@
 }
 .n-grid > .area_1 > header > nav ul > li:hover .enlace {
     animation: enlace 1.5s forwards; 
+    
+    border: var(--n-border-2);
+    border-radius: 0.20em;
 }
 @keyframes enlace {
     0%   { opacity: 0.75;           }
