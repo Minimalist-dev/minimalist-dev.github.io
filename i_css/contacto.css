@@ -84,7 +84,7 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: var(--n-color-3) transparent transparent transparent;
+    border-color: var(--n-color-3) var(--n-color-0) var(--n-color-0) var(--n-color-0);
 }
 .n-grid > .area_2 > main > section:nth-child(1) .info:hover .dato {
     visibility: visible;
@@ -145,7 +145,7 @@
 }
 .n-grid > .area_2 > main > section > form > label > .icono > path {
     fill: none;
-    stroke: var(--n-color-4);
+    stroke: var(--n-color-2);
     stroke-width: 2px;
 }
 .n-grid > .area_2 > main > section > form > label > .input:focus + .icono,
@@ -168,11 +168,11 @@
     transition: all 0.2s;
 }
 .n-grid > .area_2 > main > section > form > label:active {
-    color: var(--n-color-4);
+    color: var(--n-color-2);
 }
 .n-grid > .area_2 > main > section > form > label > .input:focus ~ .linea > .focus,
 .n-grid > .area_2 > main > section > form > label > textarea:focus ~ .linea > .focus {
-    stroke: var(--n-color-4);
+    stroke: var(--n-color-2);
 }
 .n-grid > .area_2 > main > section > form > label > .linea > .focus { stroke: var(--n-color-2); }
 .n-grid > .area_2 > main > section > form > label > .linea > .valid { stroke: var(--n-color-5); }
@@ -218,7 +218,7 @@
     border-radius: 50%;
 }
 .n-grid > .area_2 > main > section > form > section > .envase:hover input ~ .tema {
-    background-color: var(--n-color-4);
+    background-color: var(--n-color-2);
 }
 .n-grid > .area_2 > main > section > form > section > .envase > input:checked ~ .tema {
     background-color: var(--n-color-3);
@@ -279,7 +279,7 @@
     transform: translate(-50%,-50%);
     z-index: 1;
 
-    color: var(--n-color-4);
+    color: var(--n-color-2);
     background-color: var(--n-color-1);
     margin: auto;
     padding: 12px;

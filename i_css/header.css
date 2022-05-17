@@ -11,13 +11,13 @@
     position: fixed;
     z-index: 1;
     width: 100%;
-    border-bottom: 1px solid var(--n-color-2-3);
+    border-bottom: 1px solid var(--n-color-4-3);
     padding: 16px 0px 16px 0px;
     background-color: var(--n-color-1);
 }
 .n-grid > .area_1 > header > h1 {
     color: var(--n-color-1);
-    background-color: var(--n-color-4);
+    background-color: var(--n-color-2);
     font-family: var(--n-fuente-2);
     font-size: 2.10em;
     margin: 4px 0px 0px 32px;
@@ -47,18 +47,19 @@
     padding: 0;
 }
 .n-grid > .area_1 > header > section a {
-    color: var(--n-color-4);
+    color: var(--n-color-2);
     font-size: 1em;
     text-decoration-line: underline; 
     text-decoration-style: solid;
-    text-decoration-color: var(--n-color-2-3);
+    text-decoration-color: var(--n-color-4-3);
     margin: 0 0 0 0.50em;
     border: var(--n-border-0);
     padding: 0.25em;
 }
+.n-grid > .area_1 > header > section a:hover,
 .n-grid > .area_1 > header > section > div > button:hover,
-.n-grid > .area_1 > header > section a:hover {
-    color: var(--n-color-4);
+.n-grid > .area_1 > header > section > div > div#idioma > a:hover {
+    color: var(--n-color-2);
     text-decoration: underline;
 }
 .n-grid > .area_1 > header > section a:focus,
@@ -69,7 +70,7 @@
     border-radius: 0.20em;
 }
 .n-grid > .area_1 > header > section > div > button {
-    color: var(--n-color-4);
+    color: var(--n-color-2);
     background: var(--n-color-1);
     font-size: 1em;
     margin: 0;
@@ -128,7 +129,7 @@
 }
 .n-grid > .area_1 > header > nav ul > li > a {
     position: relative;
-    color: var(--n-color-4);
+    color: var(--n-color-2);
     border: var(--n-border-0);
     padding: 0.25em;
 }
@@ -142,7 +143,7 @@
     flex-direction: row;
 }
 .n-grid > .area_1 > header > nav button {
-    color: var(--n-color-4);
+    color: var(--n-color-2);
     background-color: var(--n-color-0);
     font-size: 1.0em;
     margin-top: 0;

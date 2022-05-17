@@ -34,7 +34,7 @@
     text-align: center;
 }
 .n-grid > .area_2 > main > div > h2 {
-    color: var(--n-color-4);
+    color: var(--n-color-2);
     font-size: 6.25em;
     text-transform: uppercase;
     line-height: 1.5;
@@ -53,7 +53,7 @@
     100% { clip-path: inset(0% 0% 100% 0%); }
 }
 .n-grid > .area_2 > main > div > p {
-    color: var(--n-color-4);
+    color: var(--n-color-2);
     font-size: 0.90em;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -63,7 +63,7 @@
 }
 .n-grid > .area_2 > main > div > p > span {
     color: var(--n-color-1);
-    background-color: var(--n-color-4);
+    background-color: var(--n-color-2);
     padding: 0.3vmax 0.1vmax 0.2vmax 0.3vmax;
     
     animation: servicios 4s infinite;

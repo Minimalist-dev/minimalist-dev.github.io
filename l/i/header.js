@@ -10,42 +10,42 @@ const H2    = window.matchMedia("(min-width: 551px) and (max-width: 800px)");
 const H3    = window.matchMedia("(max-width: 550px)");
 
 let _url    = 0;
-//const url   = {
-//    es: [
-//        "/github/minimalist-dev.github.io/",
-//        "/github/minimalist-dev.github.io/index.html",
-//        "/github/minimalist-dev.github.io/desarrollo-web.html",
-//        "/github/minimalist-dev.github.io/mantenimiento-web.html",
-//        "/github/minimalist-dev.github.io/asesoria-web.html",
-//        "/github/minimalist-dev.github.io/contacto.html"
-//    ],
-//    en: [
-//        "/github/minimalist-dev.github.io/en/",
-//        "/github/minimalist-dev.github.io/en/index.html",
-//        "/github/minimalist-dev.github.io/en/web-development.html",
-//        "/github/minimalist-dev.github.io/en/web-maintenance.html",
-//        "/github/minimalist-dev.github.io/en/web-consultancy.html",
-//        "/github/minimalist-dev.github.io/en/contact.html"
-//    ]
-//};
-const url = {
+const url   = {
     es: [
-        "/",
-        "/index.html",
-        "/desarrollo-web.html",
-        "/mantenimiento-web.html",
-        "/asesoria-web.html",
-        "/contacto.html"
+        "/github/minimalist-dev.github.io/",
+        "/github/minimalist-dev.github.io/index.html",
+        "/github/minimalist-dev.github.io/desarrollo-web.html",
+        "/github/minimalist-dev.github.io/mantenimiento-web.html",
+        "/github/minimalist-dev.github.io/asesoria-web.html",
+        "/github/minimalist-dev.github.io/contacto.html"
     ],
     en: [
-        "/en/",
-        "/en/index.html",
-        "/en/web-development.html",
-        "/en/web-maintenance.html",
-        "/en/web-consultancy.html",
-        "/en/contact.html"
+        "/github/minimalist-dev.github.io/en/",
+        "/github/minimalist-dev.github.io/en/index.html",
+        "/github/minimalist-dev.github.io/en/web-development.html",
+        "/github/minimalist-dev.github.io/en/web-maintenance.html",
+        "/github/minimalist-dev.github.io/en/web-consultancy.html",
+        "/github/minimalist-dev.github.io/en/contact.html"
     ]
 };
+//const url = {
+//    es: [
+//        "/",
+//        "/index.html",
+//        "/desarrollo-web.html",
+//        "/mantenimiento-web.html",
+//        "/asesoria-web.html",
+//        "/contacto.html"
+//    ],
+//    en: [
+//        "/en/",
+//        "/en/index.html",
+//        "/en/web-development.html",
+//        "/en/web-maintenance.html",
+//        "/en/web-consultancy.html",
+//        "/en/contact.html"
+//    ]
+//};
 
 class Header {
     constructor() {
@@ -107,36 +107,36 @@ class Header {
             let en = url.en[i].split("/");
             
             if(URL === url.es[i] || URL === url.en[i]) {
-//                if(idiomas.innerHTML === "Seleccionar idioma") {
-//                    idioma.innerHTML = `<a href="${es[3]}">Español</a><a href="en/${en[4]}">English</a>`;
-//                    idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
-//                } else if(idiomas.innerHTML === "Select language") {
-//                    idioma.innerHTML = `<a href="../${es[3]}">Español</a><a href="${en[4]}">English</a>`;
-//                    idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
-//                } else {
-//                    idioma.innerHTML = "";
-//
-//                    if(URL.substr(0, 36) === "/github/minimalist-dev.github.io/en/") {
-//                        idiomas.innerHTML = "Select language";
-//                    } else {
-//                        idiomas.innerHTML = "Seleccionar idioma";
-//                    }
-//                }
                 if(idiomas.innerHTML === "Seleccionar idioma") {
-                    idioma.innerHTML = `<a href="${es[1]}">Español</a><a href="en/${en[2]}">English</a>`;
+                    idioma.innerHTML = `<a href="${es[3]}">Español</a><a href="en/${en[4]}">English</a>`;
                     idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
                 } else if(idiomas.innerHTML === "Select language") {
-                    idioma.innerHTML = `<a href="../${es[1]}">Español</a><a href="${en[2]}">English</a>`;
+                    idioma.innerHTML = `<a href="../${es[3]}">Español</a><a href="${en[4]}">English</a>`;
                     idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
                 } else {
                     idioma.innerHTML = "";
 
-                    if(URL.substr(0, 4) === "/en/") {
+                    if(URL.substr(0, 36) === "/github/minimalist-dev.github.io/en/") {
                         idiomas.innerHTML = "Select language";
                     } else {
                         idiomas.innerHTML = "Seleccionar idioma";
                     }
                 }
+//                if(idiomas.innerHTML === "Seleccionar idioma") {
+//                    idioma.innerHTML = `<a href="${es[1]}">Español</a><a href="en/${en[2]}">English</a>`;
+//                    idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
+//                } else if(idiomas.innerHTML === "Select language") {
+//                    idioma.innerHTML = `<a href="../${es[1]}">Español</a><a href="${en[2]}">English</a>`;
+//                    idiomas.innerHTML = "<i class='fa fa-times-circle' style='color: var(--n-color-6);'></i>";
+//                } else {
+//                    idioma.innerHTML = "";
+//
+//                    if(URL.substr(0, 4) === "/en/") {
+//                        idiomas.innerHTML = "Select language";
+//                    } else {
+//                        idiomas.innerHTML = "Seleccionar idioma";
+//                    }
+//                }
             }
         }
     }
