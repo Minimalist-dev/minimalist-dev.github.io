@@ -35,20 +35,16 @@ class Contacto {
         }).then(function(json) {
             if(URL === url.es[5]) {
                 if(json.length === 8) {
-                    res.innerHTML = "<span style='color: var(--n-color-5)'>Su mensaje a sido recibido.</span>";
+                    res.innerHTML = "<p>Su mensaje a sido recibido.</p>";
                 } else if(json.length === 16) {
-                    res.innerHTML = "<span style='color: var(--n-color-6)'>Escriba según el formato.</span>";
+                    res.innerHTML = "<p style='color: var(--n-color-6)'>Escriba según el formato.</p>";
                 }
-                
-                setTimeout(function() { res.innerHTML = 'Contacto'; }, 4000);
             } else if(URL === url.en[5]) {
                 if(json.length === 8) {
-                    res.innerHTML = "<span style='color: var(--n-color-5)'>Your message has been received.</span>";
+                    res.innerHTML = "<p>Your message has been received.</p>";
                 } else if(json.length === 16) {
-                    res.innerHTML = "<span style='color: var(--n-color-6)'>Write according to the format.</span>";
+                    res.innerHTML = "<p style='color: var(--n-color-6)'>Write according to the format.</p>";
                 }
-
-                setTimeout(function() { res.innerHTML = 'Contact'; }, 4000);
             }
             
             req.reset();
