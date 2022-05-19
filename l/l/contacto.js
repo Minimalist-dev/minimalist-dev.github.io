@@ -33,21 +33,20 @@ class Contacto {
             if(response.ok) { return response.text(); } 
             else { throw 'Error de URL o respuesta.'; }
         }).then(function(json) {
-            if(URL === url.es[5]) {
-                if(json.length === 8) {
-                    res.innerHTML = "<p>Su mensaje a sido recibido.</p>";
-                } else if(json.length === 16) {
-                    res.innerHTML = "<p style='color: var(--n-color-6)'>Escriba según el formato.</p>";
-                }
-            } else if(URL === url.en[5]) {
-                if(json.length === 8) {
-                    res.innerHTML = "<p>Your message has been received.</p>";
-                } else if(json.length === 16) {
-                    res.innerHTML = "<p style='color: var(--n-color-6)'>Write according to the format.</p>";
-                }
-            }
-            
             req.reset();
+
+            switch(URL) {
+                case url.es[5]:
+                    switch(json.length) {
+                        case 8: res.innerHTML = "<p>Su mensaje a sido recibido.</p>"; break;
+                        case 16: res.innerHTML = "<p style='color: var(--n-color-6)'>Escriba según el formato.</p>"; break;
+                    } break;
+                case url.en[5]:
+                    switch(json.length) {
+                        case 8: res.innerHTML = "<p>Your message has been received.</p>";break;
+                        case 16: res.innerHTML = "<p style='color: var(--n-color-6)'>Write according to the format.</p>"; break;
+                    } break;
+            }
         }).catch(function (error) {
             console.log('Error de captura: ' + error.message);
         });
