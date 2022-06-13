@@ -62,17 +62,17 @@
 --------------------------------------------------------------------------------*/
 .n-grid > .area_3 > aside > .navegador {
     background-color: var(--n-color-1);
-    border: 3px solid #f1f1f1;
+    border: 3px solid var(--n-color-2-1);
     border-radius: 4px;
 }
 /* Aside: sitio web
 --------------------------------------------------------------------------------*/
 svg {
-    background-color: white; 
-    margin-bottom: -5px;
+    background-color: var(--n-color-1);
+    margin-bottom: -0.08em;
 }
 svg > rect#barra {
-    fill: #f1f1f1;
+    fill: var(--n-color-2-1);
     width: 500px;
     height: 30px;
 }

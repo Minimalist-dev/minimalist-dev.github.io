@@ -148,6 +148,13 @@ class Header {
             if(H3.matches && i === _url) { document.querySelector(".header_" + i + 3).style.color = "var(--n-color-3)"; }
         }
     }
+    static
+    year() {
+        let d       = new Date();
+        let year    = d.getFullYear();
+        
+        document.querySelector(".year").innerHTML = year;
+    }
 };
 
 /* header: disparadores
@@ -163,6 +170,8 @@ menuTablet.onclick = function() {
 menuCelular.onclick = function() {
     Header.celular();
 };
+
+Header.year();
 
 /* header: exportaciones
 --------------------------------------------------------------------------------*/
