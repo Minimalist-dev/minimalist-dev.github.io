@@ -22,8 +22,8 @@ class Contacto {
             submit: submit.value
         });
         
-//        fetch('https://minimalist-dev.herokuapp.com/oking', {
-        fetch('http://localhost:3000/oking', {
+        fetch('https://minimalist-dev.herokuapp.com/oking', {
+//        fetch('http://localhost:3000/oking', {
             headers: { 
                 'Content-Type': 'application/json' 
             },
